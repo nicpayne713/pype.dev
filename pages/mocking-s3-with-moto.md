@@ -19,6 +19,7 @@ import pytest
 from moto import mock_s3
 
 MY_BUCKET = "bucket"
+# BAD PREFIX
 MY_PREFIX = "bucket/project/data/layer/dataset/"
 
 
