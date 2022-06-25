@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width" name="viewport"/>
+  <link href="/bitmoji.ico" rel="icon" type="image/png"/>
+  <link href="https://pype.dev/til/dataframe-to-markdown/amp/" rel="amphtml"/>
+  <meta content="$ilp.uphold.com/MGN2ni2YMXaQ" name="monetization" property="monetization"/>
+  <!-- <link rel='stylesheet' href='/fonts.css' />
+  <link rel='stylesheet' href='/archive-styles.css' />
+  <link rel='stylesheet' href='/article.css' /> -->
+  <link href="/main.css" rel="stylesheet"/>
+  <link as="style" href="/one-dark.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+  <link as="style" href="/furo-purge.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+  <!-- <link rel="preload" href="/scroll.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+  <noscript>
+   <!-- <link rel='stylesheet' href='/scroll.css' /> -->
+   <link href="/one-dark.min.css" rel="stylesheet"/>
+   <link href="/furo-purge.min.css" rel="stylesheet"/>
+  </noscript>
+  <link href="bitmoji_48x48.png" rel="apple-touch-icon" sizes="48x48"/>
+  <link href="bitmoji_72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+  <link href="bitmoji_96x96.png" rel="apple-touch-icon" sizes="96x96"/>
+  <link href="bitmoji_144x144.png" rel="apple-touch-icon" sizes="144x144"/>
+  <link href="bitmoji_192x192.png" rel="apple-touch-icon" sizes="192x192"/>
+  <link href="bitmoji_256x256.png" rel="apple-touch-icon" sizes="256x256"/>
+  <link href="bitmoji_384x384.png" rel="apple-touch-icon" sizes="384x384"/>
+  <link href="bitmoji_512x512.png" rel="apple-touch-icon" sizes="512x512"/>
+  <title>
+   Dataframe-To-Markdown
+  </title>
+  <meta content="article" name="og:type" property="og:type"/>
+  <meta content="Nicholas Payne" name="og:author" property="og:author"/>
+  <meta content="Nicholas Payne" name="og:site_name" property="og:site_name"/>
+  <meta content="#3A5895" name="theme-color"/>
+  <meta content="Nicholas Payne" name="og:author" property="og:author"/>
+  <meta content="pypeaday@pm.me" name="og:author_email" property="og:author_email"/>
+  <meta content="website" name="og:type" property="og:type"/>
+  <meta content="pandas.DataFrame I do a lot of work with tabular data and one thing I have incorporated into some of that work is automatic data summary reports by throwing the" name="description" property="description"/>
+  <meta content="pandas.DataFrame I do a lot of work with tabular data and one thing I have incorporated into some of that work is automatic data summary reports by throwing the" name="og:description" property="og:description"/>
+  <meta content="pandas.DataFrame I do a lot of work with tabular data and one thing I have incorporated into some of that work is automatic data summary reports by throwing the" name="twitter:description" property="twitter:description"/>
+  <meta content="Dataframe-To-Markdown | Pypeaday" name="og:title" property="og:title"/>
+  <meta content="Dataframe-To-Markdown | Pypeaday" name="twitter:title" property="twitter:title"/>
+  <meta content="/static/images/til/dataframe-to-markdown-og.png" name="og:image" property="og:image"/>
+  <meta content="/static/images/til/dataframe-to-markdown-og.png" name="twitter:image" property="twitter:image"/>
+  <meta content="1600" name="og:image:width" property="og:image:width"/>
+  <meta content="900" name="og:image:width" property="og:image:width"/>
+  <meta content="summary_large_image" name="twitter:card" property="twitter:card"/>
+  <meta content="Pypeaday" name="og:site_name" property="og:site_name"/>
+  <meta content="@pypeaday" name="twitter:creator" property="twitter:creator"/>
+  <meta content="Dataframe-To-Markdown" name="title" property="title"/>
+  <meta content="markata 0.2.0" name="generator" property="generator"/>
+  <link href="https://pype.dev/til/dataframe-to-markdown/" rel="canonical"/>
+  <meta content="https://pype.dev/til/dataframe-to-markdown/" name="og:url" property="og:url"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="/static/images/til/dataframe-to-markdown-og_250x140.png" name="og:sm_image" property="og:sm_image"/>
+  <meta content="/static/images/til/dataframe-to-markdown-og_250x140.png" name="og:sm_image" property="og:sm_image"/>
+ </head>
+ <body>
+  <nav>
+   <ul>
+    <li>
+     <a href="/">
+      Home
+     </a>
+    </li>
+    <li>
+     <a href="/archive/">
+      Archive
+     </a>
+    </li>
+    <li>
+     <a aria-label="RSS" href="/rss.xml">
+      <svg class="icon" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+       <path d="M 4 4.44 v 2.83 c 7.03 0 12.73 5.7 12.73 12.73 h 2.83 c 0 -8.59 -6.97 -15.56 -15.56 -15.56 Z m 0 5.66 v 2.83 c 3.9 0 7.07 3.17 7.07 7.07 h 2.83 c 0 -5.47 -4.43 -9.9 -9.9 -9.9 Z M 6.18 15.64 A 2.18 2.18 0 0 1 6.18 20 A 2.18 2.18 0 0 1 6.18 15.64" fill="currentColor">
+       </path>
+      </svg>
+     </a>
+    </li>
+   </ul>
+  </nav>
+  <article class="blog-post h-entry">
+   <!-- <div id='cover-wrapper'>
+      <img src='/til/dataframe-to-markdown.webp' alt='cover image for article' />
+    </div> -->
+   <div id="title-wrapper">
+    <a class="u-url" href="https://pype.dev/til/dataframe-to-markdown/">
+     <h1 class="flair" id="title" style="text-align:right;z-index:2;padding-right:.2rem">
+      Dataframe-To-Markdown
+     </h1>
+    </a>
+    <p>
+     <time class="dt-published post-date" datetime="2022-05-07" style="text-align:right;z-index:2">
+      2022-05-07
+     </time>
+    </p>
+    <div class="h-card p-author" rel="author">
+     <div class="content">
+      <a class="p-name u-url" href="https://pype.dev/">
+       <p>
+        <span class="p-given-name">
+         Nicholas
+        </span>
+        <span class="p-family-name">
+         Payne
+        </span>
+       </p>
+      </a>
+      <p class="p-note">
+       Goofing off
+       <a href="https://twitter.com/pypeaday">
+        @pypeaday
+       </a>
+      </p>
+     </div>
+    </div>
+    <!-- edit -->
+    <p>
+     <a alt="edit post url" href="https://github.com/nicpayne713/mental-data-lake/edit/main/pages/blog/til/dataframe-to-markdown.md" title="edit this post">
+      edit
+      <span aria-label="" role="img">
+       ✏️
+      </span>
+     </a>
+    </p>
+   </div>
+   <!-- <h2 class='toc'>toc</h2> -->
+   <!-- <div class="toc">
+<ul>
+<li><a href="#abcmeta">ABCMeta</a></li>
+</ul>
+</div>
+ -->
+   <div id="post-body">
+    <h1 id="pandas">
+     Pandas
+     <a alt="id" class="heading-permalink" href="#pandas" title="link to #pandas">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h1>
+    <p>
+     <code>
+      pandas.DataFrame
+     </code>
+     s are pretty sweet data structures in Python.
+    </p>
+    <p>
+     I do a lot of work with tabular data and one thing I have incorporated into some of that work is automatic data summary reports by throwing the first few, or several relevant, rows of a dataframe at a point in a pipeline into a markdown file.
+    </p>
+    <p>
+     Pandas has a method on DataFrames that makes this 100% trivial!
+    </p>
+    <h1 id="the-method">
+     The Method
+     <a alt="id" class="heading-permalink" href="#the-method" title="link to #the-method">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h1>
+    <p>
+     Say we have a dataframe,
+     <code>
+      df
+     </code>
+     ... then it's literally just:
+     <code>
+      df.to_markdown()
+     </code>
+    </p>
+    <div class="highlight">
+     <pre><span></span><code><span class="err">❯</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+          <span class="n">Unnamed</span><span class="p">:</span> <span class="mi">0</span>   <span class="n">mpg</span>  <span class="n">cyl</span>   <span class="n">disp</span>   <span class="n">hp</span>  <span class="n">drat</span>     <span class="n">wt</span>   <span class="n">qsec</span>  <span class="n">vs</span>  <span class="n">am</span>  <span class="n">gear</span>  <span class="n">carb</span>
+<span class="mi">0</span>          <span class="n">Mazda</span> <span class="n">RX4</span>  <span class="mf">21.0</span>    <span class="mi">6</span>  <span class="mf">160.0</span>  <span class="mi">110</span>  <span class="mf">3.90</span>  <span class="mf">2.620</span>  <span class="mf">16.46</span>   <span class="mi">0</span>   <span class="mi">1</span>     <span class="mi">4</span>     <span class="mi">4</span>
+<span class="mi">1</span>      <span class="n">Mazda</span> <span class="n">RX4</span> <span class="n">Wag</span>  <span class="mf">21.0</span>    <span class="mi">6</span>  <span class="mf">160.0</span>  <span class="mi">110</span>  <span class="mf">3.90</span>  <span class="mf">2.875</span>  <span class="mf">17.02</span>   <span class="mi">0</span>   <span class="mi">1</span>     <span class="mi">4</span>     <span class="mi">4</span>
+<span class="mi">2</span>         <span class="n">Datsun</span> <span class="mi">710</span>  <span class="mf">22.8</span>    <span class="mi">4</span>  <span class="mf">108.0</span>   <span class="mi">93</span>  <span class="mf">3.85</span>  <span class="mf">2.320</span>  <span class="mf">18.61</span>   <span class="mi">1</span>   <span class="mi">1</span>     <span class="mi">4</span>     <span class="mi">1</span>
+<span class="mi">3</span>     <span class="n">Hornet</span> <span class="mi">4</span> <span class="n">Drive</span>  <span class="mf">21.4</span>    <span class="mi">6</span>  <span class="mf">258.0</span>  <span class="mi">110</span>  <span class="mf">3.08</span>  <span class="mf">3.215</span>  <span class="mf">19.44</span>   <span class="mi">1</span>   <span class="mi">0</span>     <span class="mi">3</span>     <span class="mi">1</span>
+<span class="mi">4</span>  <span class="n">Hornet</span> <span class="n">Sportabout</span>  <span class="mf">18.7</span>    <span class="mi">8</span>  <span class="mf">360.0</span>  <span class="mi">175</span>  <span class="mf">3.15</span>  <span class="mf">3.440</span>  <span class="mf">17.02</span>   <span class="mi">0</span>   <span class="mi">0</span>     <span class="mi">3</span>     <span class="mi">2</span>
+</code></pre>
+    </div>
+    <p>
+     In ipython I can call the method and get a markdown table back as a string
+    </p>
+    <div class="highlight">
+     <pre><span></span><code><span class="n">mental</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">lake</span> <span class="err"></span>  <span class="n">new</span><span class="o">-</span><span class="n">posts</span> <span class="n">via</span> <span class="mf">3.8.11</span><span class="p">(</span><span class="n">mental</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">lake</span><span class="p">)</span> <span class="n">ipython</span>
+<span class="err">❯</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">()</span>
+<span class="s1">'|    | Unnamed: 0        |   mpg |   cyl |   disp |   hp |   drat |    wt |   qsec |   vs |   am |   gear |   carb |</span><span class="se">\n</span><span class="s1">|---:|:------------------|------:|------:|-------:|-----:|-------:|------:|-------:|-----:|-----:|-------:|-------:|</span><span class="se">\n</span><span class="s1">|  0 | Mazda RX4         |  21   |     6 |    160 |  110 |   3.9  | 2.62  |  16.46 |    0 |    1 |      4 |      4 |</span><span class="se">\n</span><span class="s1">|  1 | Mazda RX4 Wag     |  21   |     6 |    160 |  110 |   3.9  | 2.875 |  17.02 |    0 |    1 |      4 |      4 |</span><span class="se">\n</span><span class="s1">|  2 | Datsun 710        |  22.8 |     4 |    108 |   93 |   3.85 | 2.32  |  18.61 |    1 |    1 |      4 |      1 |</span><span class="se">\n</span><span class="s1">|  3 | Hornet 4 Drive    |  21.4 |     6 |    258 |  110 |   3.08 | 3.215 |  19.44 |    1 |    0 |      3 |      1 |</span><span class="se">\n</span><span class="s1">|  4 | Hornet Sportabout |  18.7 |     8 |    360 |  175 |   3.15 | 3.44  |  17.02 |    0 |    0 |      3 |      2 |'</span>
+</code></pre>
+    </div>
+    <p>
+     You can drop that string into a markdown file and using any reader that supports the rendering you'll have a nicely formated table of example data in whatever report you're making!
+    </p>
+    <h1 id="bonus-method">
+     Bonus method
+     <a alt="id" class="heading-permalink" href="#bonus-method" title="link to #bonus-method">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h1>
+    <p>
+     Just like markdown, you can export a dataframe to html with
+     <code>
+      df.to_html()
+     </code>
+     and use that if it's more appropriate for your use case:
+    </p>
+    <div class="highlight">
+     <pre><span></span><code>'&lt;table border="1" class="dataframe"&gt;\n  &lt;thead&gt;\n    &lt;tr style="text-align: right;"&gt;\n      &lt;th&gt;&lt;/th&gt;\n      &lt;th&gt;Unnamed: 0&lt;/th&gt;\n      &lt;th&gt;mpg&lt;/th&gt;\n      &lt;th&gt;cyl&lt;/th&gt;\n      &lt;th&gt;disp&lt;/th&gt;\n      &lt;th&gt;hp&lt;/th&gt;\n      &lt;th&gt;drat&lt;/th&gt;\n      &lt;th&gt;wt&lt;/th&gt;\n      &lt;th&gt;qsec&lt;/th&gt;\n      &lt;th&gt;vs&lt;/th&gt;\n      &lt;th&gt;am&lt;/th&gt;\n      &lt;th&gt;gear&lt;/th&gt;\n      &lt;th&gt;carb&lt;/th&gt;\n    &lt;/tr&gt;\n  &lt;/thead&gt;\n  &lt;tbody&gt;\n    &lt;tr&gt;\n      &lt;th&gt;0&lt;/th&gt;\n      &lt;td&gt;Mazda RX4&lt;/td&gt;\n      &lt;td&gt;21.0&lt;/td&gt;\n      &lt;td&gt;6&lt;/td&gt;\n      &lt;td&gt;160.0&lt;/td&gt;\n      &lt;td&gt;110&lt;/td&gt;\n      &lt;td&gt;3.90&lt;/td&gt;\n      &lt;td&gt;2.620&lt;/td&gt;\n      &lt;td&gt;16.46&lt;/td&gt;\n      &lt;td&gt;0&lt;/td&gt;\n      &lt;td&gt;1&lt;/td&gt;\n      &lt;td&gt;4&lt;/td&gt;\n      &lt;td&gt;4&lt;/td&gt;\n    &lt;/tr&gt;\n    &lt;tr&gt;\n      &lt;th&gt;1&lt;/th&gt;\n      &lt;td&gt;Mazda RX4 Wag&lt;/td&gt;\n      &lt;td&gt;21.0&lt;/td&gt;\n      &lt;td&gt;6&lt;/td&gt;\n      &lt;td&gt;160.0&lt;/td&gt;\n      &lt;td&gt;110&lt;/td&gt;\n      &lt;td&gt;3.90&lt;/td&gt;\n      &lt;td&gt;2.875&lt;/td&gt;\n      &lt;td&gt;17.02&lt;/td&gt;\n      &lt;td&gt;0&lt;/td&gt;\n      &lt;td&gt;1&lt;/td&gt;\n      &lt;td&gt;4&lt;/td&gt;\n      &lt;td&gt;4&lt;/td&gt;\n    &lt;/tr&gt;\n    &lt;tr&gt;\n      &lt;th&gt;2&lt;/th&gt;\n      &lt;td&gt;Datsun 710&lt;/td&gt;\n      &lt;td&gt;22.8&lt;/td&gt;\n      &lt;td&gt;4&lt;/td&gt;\n      &lt;td&gt;108.0&lt;/td&gt;\n      &lt;td&gt;93&lt;/td&gt;\n      &lt;td&gt;3.85&lt;/td&gt;\n      &lt;td&gt;2.320&lt;/td&gt;\n      &lt;td&gt;18.61&lt;/td&gt;\n      &lt;td&gt;1&lt;/td&gt;\n      &lt;td&gt;1&lt;/td&gt;\n      &lt;td&gt;4&lt;/td&gt;\n      &lt;td&gt;1&lt;/td&gt;\n    &lt;/tr&gt;\n    &lt;tr&gt;\n      &lt;th&gt;3&lt;/th&gt;\n      &lt;td&gt;Hornet 4 Drive&lt;/td&gt;\n      &lt;td&gt;21.4&lt;/td&gt;\n      &lt;td&gt;6&lt;/td&gt;\n      &lt;td&gt;258.0&lt;/td&gt;\n      &lt;td&gt;110&lt;/td&gt;\n      &lt;td&gt;3.08&lt;/td&gt;\n      &lt;td&gt;3.215&lt;/td&gt;\n      &lt;td&gt;19.44&lt;/td&gt;\n      &lt;td&gt;1&lt;/td&gt;\n      &lt;td&gt;0&lt;/td&gt;\n      &lt;td&gt;3&lt;/td&gt;\n      &lt;td&gt;1&lt;/td&gt;\n    &lt;/tr&gt;\n    &lt;tr&gt;\n      &lt;th&gt;4&lt;/th&gt;\n      &lt;td&gt;Hornet Sportabout&lt;/td&gt;\n      &lt;td&gt;18.7&lt;/td&gt;\n      &lt;td&gt;8&lt;/td&gt;\n      &lt;td&gt;360.0&lt;/td&gt;\n      &lt;td&gt;175&lt;/td&gt;\n      &lt;td&gt;3.15&lt;/td&gt;\n      &lt;td&gt;3.440&lt;/td&gt;\n      &lt;td&gt;17.02&lt;/td&gt;\n      &lt;td&gt;0&lt;/td&gt;\n      &lt;td&gt;0&lt;/td&gt;\n      &lt;td&gt;3&lt;/td&gt;\n      &lt;td&gt;2&lt;/td&gt;\n    &lt;/tr&gt;\n  &lt;/tbody&gt;\n&lt;/table&gt;'
+</code></pre>
+    </div>
+    <p>
+     My blog will render that html into a nice table! (After removing new line characters)
+    </p>
+    <table border="1" class="dataframe">
+     <thead>
+      <tr style="text-align: right;">
+       <th>
+        Unnamed: 0
+       </th>
+       <th>
+        mpg
+       </th>
+       <th>
+        cyl
+       </th>
+       <th>
+        disp
+       </th>
+       <th>
+        hp
+       </th>
+       <th>
+        drat
+       </th>
+       <th>
+        wt
+       </th>
+       <th>
+        qsec
+       </th>
+       <th>
+        vs
+       </th>
+       <th>
+        am
+       </th>
+       <th>
+        gear
+       </th>
+       <th>
+        carb
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        Mazda RX4
+       </td>
+       <td>
+        21.0
+       </td>
+       <td>
+        6
+       </td>
+       <td>
+        160.0
+       </td>
+       <td>
+        110
+       </td>
+       <td>
+        3.90
+       </td>
+       <td>
+        2.620
+       </td>
+       <td>
+        16.46
+       </td>
+       <td>
+        0
+       </td>
+       <td>
+        1
+       </td>
+       <td>
+        4
+       </td>
+       <td>
+        4
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Mazda RX4 Wag
+       </td>
+       <td>
+        21.0
+       </td>
+       <td>
+        6
+       </td>
+       <td>
+        160.0
+       </td>
+       <td>
+        110
+       </td>
+       <td>
+        3.90
+       </td>
+       <td>
+        2.875
+       </td>
+       <td>
+        17.02
+       </td>
+       <td>
+        0
+       </td>
+       <td>
+        1
+       </td>
+       <td>
+        4
+       </td>
+       <td>
+        4
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Datsun 710
+       </td>
+       <td>
+        22.8
+       </td>
+       <td>
+        4
+       </td>
+       <td>
+        108.0
+       </td>
+       <td>
+        93
+       </td>
+       <td>
+        3.85
+       </td>
+       <td>
+        2.320
+       </td>
+       <td>
+        18.61
+       </td>
+       <td>
+        1
+       </td>
+       <td>
+        1
+       </td>
+       <td>
+        4
+       </td>
+       <td>
+        1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Hornet 4 Drive
+       </td>
+       <td>
+        21.4
+       </td>
+       <td>
+        6
+       </td>
+       <td>
+        258.0
+       </td>
+       <td>
+        110
+       </td>
+       <td>
+        3.08
+       </td>
+       <td>
+        3.215
+       </td>
+       <td>
+        19.44
+       </td>
+       <td>
+        1
+       </td>
+       <td>
+        0
+       </td>
+       <td>
+        3
+       </td>
+       <td>
+        1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Hornet Sportabout
+       </td>
+       <td>
+        18.7
+       </td>
+       <td>
+        8
+       </td>
+       <td>
+        360.0
+       </td>
+       <td>
+        175
+       </td>
+       <td>
+        3.15
+       </td>
+       <td>
+        3.440
+       </td>
+       <td>
+        17.02
+       </td>
+       <td>
+        0
+       </td>
+       <td>
+        0
+       </td>
+       <td>
+        3
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <hr/>
+   <div id="show">
+   </div>
+  </article>
+  <footer>
+   <ul class="social">
+    <li>
+     <a href="https://twitter.com/pypeaday">
+      twitter
+     </a>
+    </li>
+    <li>
+     <a href="https://www.linkedin.com/in/nicpayne713/">
+      LinkedIn
+     </a>
+    </li>
+    <li>
+     <a href="https://github.com/nicpayne713">
+      GitHub
+     </a>
+    </li>
+    <li>
+     <a href="https://www.twitch.tv/pypeaday">
+      twitch
+     </a>
+    </li>
+   </ul>
+   <p>
+    © 2022 - 2022
+   </p>
+  </footer>
+ </body>
+</html>

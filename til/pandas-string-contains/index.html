@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width" name="viewport"/>
+  <link href="/bitmoji.ico" rel="icon" type="image/png"/>
+  <link href="https://pype.dev/til/pandas-string-contains/amp/" rel="amphtml"/>
+  <meta content="$ilp.uphold.com/MGN2ni2YMXaQ" name="monetization" property="monetization"/>
+  <!-- <link rel='stylesheet' href='/fonts.css' />
+  <link rel='stylesheet' href='/archive-styles.css' />
+  <link rel='stylesheet' href='/article.css' /> -->
+  <link href="/main.css" rel="stylesheet"/>
+  <link as="style" href="/one-dark.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+  <link as="style" href="/furo-purge.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+  <!-- <link rel="preload" href="/scroll.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+  <noscript>
+   <!-- <link rel='stylesheet' href='/scroll.css' /> -->
+   <link href="/one-dark.min.css" rel="stylesheet"/>
+   <link href="/furo-purge.min.css" rel="stylesheet"/>
+  </noscript>
+  <link href="bitmoji_48x48.png" rel="apple-touch-icon" sizes="48x48"/>
+  <link href="bitmoji_72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+  <link href="bitmoji_96x96.png" rel="apple-touch-icon" sizes="96x96"/>
+  <link href="bitmoji_144x144.png" rel="apple-touch-icon" sizes="144x144"/>
+  <link href="bitmoji_192x192.png" rel="apple-touch-icon" sizes="192x192"/>
+  <link href="bitmoji_256x256.png" rel="apple-touch-icon" sizes="256x256"/>
+  <link href="bitmoji_384x384.png" rel="apple-touch-icon" sizes="384x384"/>
+  <link href="bitmoji_512x512.png" rel="apple-touch-icon" sizes="512x512"/>
+  <title>
+   Pandas-String-Contains
+  </title>
+  <meta content="article" name="og:type" property="og:type"/>
+  <meta content="Nicholas Payne" name="og:author" property="og:author"/>
+  <meta content="Nicholas Payne" name="og:site_name" property="og:site_name"/>
+  <meta content="#3A5895" name="theme-color"/>
+  <meta content="Nicholas Payne" name="og:author" property="og:author"/>
+  <meta content="pypeaday@pm.me" name="og:author_email" property="og:author_email"/>
+  <meta content="website" name="og:type" property="og:type"/>
+  <meta content="pandas.Series.str.contains We often need to filter pandas DataFrames based on several string values in a Series. Notice that sweet pyflyby import 😁 And this isn" name="description" property="description"/>
+  <meta content="pandas.Series.str.contains We often need to filter pandas DataFrames based on several string values in a Series. Notice that sweet pyflyby import 😁 And this isn" name="og:description" property="og:description"/>
+  <meta content="pandas.Series.str.contains We often need to filter pandas DataFrames based on several string values in a Series. Notice that sweet pyflyby import 😁 And this isn" name="twitter:description" property="twitter:description"/>
+  <meta content="Pandas-String-Contains | Pypeaday" name="og:title" property="og:title"/>
+  <meta content="Pandas-String-Contains | Pypeaday" name="twitter:title" property="twitter:title"/>
+  <meta content="/static/images/til/pandas-string-contains-og.png" name="og:image" property="og:image"/>
+  <meta content="/static/images/til/pandas-string-contains-og.png" name="twitter:image" property="twitter:image"/>
+  <meta content="1600" name="og:image:width" property="og:image:width"/>
+  <meta content="900" name="og:image:width" property="og:image:width"/>
+  <meta content="summary_large_image" name="twitter:card" property="twitter:card"/>
+  <meta content="Pypeaday" name="og:site_name" property="og:site_name"/>
+  <meta content="@pypeaday" name="twitter:creator" property="twitter:creator"/>
+  <meta content="Pandas-String-Contains" name="title" property="title"/>
+  <meta content="markata 0.2.0" name="generator" property="generator"/>
+  <link href="https://pype.dev/til/pandas-string-contains/" rel="canonical"/>
+  <meta content="https://pype.dev/til/pandas-string-contains/" name="og:url" property="og:url"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="/static/images/til/pandas-string-contains-og_250x140.png" name="og:sm_image" property="og:sm_image"/>
+  <meta content="/static/images/til/pandas-string-contains-og_250x140.png" name="og:sm_image" property="og:sm_image"/>
+ </head>
+ <body>
+  <nav>
+   <ul>
+    <li>
+     <a href="/">
+      Home
+     </a>
+    </li>
+    <li>
+     <a href="/archive/">
+      Archive
+     </a>
+    </li>
+    <li>
+     <a aria-label="RSS" href="/rss.xml">
+      <svg class="icon" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+       <path d="M 4 4.44 v 2.83 c 7.03 0 12.73 5.7 12.73 12.73 h 2.83 c 0 -8.59 -6.97 -15.56 -15.56 -15.56 Z m 0 5.66 v 2.83 c 3.9 0 7.07 3.17 7.07 7.07 h 2.83 c 0 -5.47 -4.43 -9.9 -9.9 -9.9 Z M 6.18 15.64 A 2.18 2.18 0 0 1 6.18 20 A 2.18 2.18 0 0 1 6.18 15.64" fill="currentColor">
+       </path>
+      </svg>
+     </a>
+    </li>
+   </ul>
+  </nav>
+  <article class="blog-post h-entry">
+   <!-- <div id='cover-wrapper'>
+      <img src='/til/pandas-string-contains.webp' alt='cover image for article' />
+    </div> -->
+   <div id="title-wrapper">
+    <a class="u-url" href="https://pype.dev/til/pandas-string-contains/">
+     <h1 class="flair" id="title" style="text-align:right;z-index:2;padding-right:.2rem">
+      Pandas-String-Contains
+     </h1>
+    </a>
+    <p>
+     <time class="dt-published post-date" datetime="2022-05-02" style="text-align:right;z-index:2">
+      2022-05-02
+     </time>
+    </p>
+    <div class="h-card p-author" rel="author">
+     <div class="content">
+      <a class="p-name u-url" href="https://pype.dev/">
+       <p>
+        <span class="p-given-name">
+         Nicholas
+        </span>
+        <span class="p-family-name">
+         Payne
+        </span>
+       </p>
+      </a>
+      <p class="p-note">
+       Goofing off
+       <a href="https://twitter.com/pypeaday">
+        @pypeaday
+       </a>
+      </p>
+     </div>
+    </div>
+    <!-- edit -->
+    <p>
+     <a alt="edit post url" href="https://github.com/nicpayne713/mental-data-lake/edit/main/pages/blog/til/pandas-string-contains.md" title="edit this post">
+      edit
+      <span aria-label="" role="img">
+       ✏️
+      </span>
+     </a>
+    </p>
+   </div>
+   <!-- <h2 class='toc'>toc</h2> -->
+   <!-- <div class="toc">
+<ul>
+<li><a href="#abcmeta">ABCMeta</a></li>
+</ul>
+</div>
+ -->
+   <div id="post-body">
+    <h1 id="tldr">
+     TL;DR
+     <a alt="id" class="heading-permalink" href="#tldr" title="link to #tldr">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h1>
+    <p>
+     <code>
+      pandas.Series.str.contains
+     </code>
+     accepts regular expressions and this is turned on by
+     <strong>
+      default
+     </strong>
+     !
+    </p>
+    <h1 id="use-case">
+     Use case
+     <a alt="id" class="heading-permalink" href="#use-case" title="link to #use-case">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h1>
+    <p>
+     We often need to filter pandas DataFrames based on several string values in a Series.
+    </p>
+    <blockquote>
+     <p>
+      Notice that sweet pyflyby import 😁!
+     </p>
+    </blockquote>
+    <div class="highlight">
+     <pre><span></span><code><span class="n">sandbox</span> <span class="err"></span>  <span class="n">main</span> <span class="n">via</span> <span class="mf">3.8.11</span><span class="p">(</span><span class="n">sandbox</span><span class="p">)</span> <span class="n">ipython</span>
+<span class="err">❯</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">"A"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"string1"</span><span class="p">,</span> <span class="s2">"string2"</span><span class="p">,</span> <span class="s2">"string3"</span><span class="p">]})</span>
+<span class="p">[</span><span class="n">PYFLYBY</span><span class="p">]</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">sandbox</span> <span class="err"></span>  <span class="n">main</span> <span class="n">via</span> <span class="mf">3.8.11</span><span class="p">(</span><span class="n">sandbox</span><span class="p">)</span> <span class="n">ipython</span>
+<span class="err">❯</span> <span class="n">df</span>
+
+         <span class="n">A</span>
+<span class="mi">0</span>  <span class="n">string1</span>
+<span class="mi">1</span>  <span class="n">string2</span>
+<span class="mi">2</span>  <span class="n">string3</span>
+
+<span class="n">sandbox</span> <span class="err"></span>  <span class="n">main</span> <span class="n">via</span> <span class="mf">3.8.11</span><span class="p">(</span><span class="n">sandbox</span><span class="p">)</span> <span class="n">ipython</span>
+<span class="err">❯</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">A</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">'1'</span><span class="p">)</span> <span class="o">|</span> <span class="n">df</span><span class="o">.</span><span class="n">A</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">'2'</span><span class="p">)]</span>
+
+         <span class="n">A</span>
+<span class="mi">0</span>  <span class="n">string1</span>
+<span class="mi">1</span>  <span class="n">string2</span>
+</code></pre>
+    </div>
+    <p>
+     And this isn't the worst thing in the world, especially for such a tiny example...
+    </p>
+    <p>
+     But what if we had dozens or more values to filter on?
+    </p>
+    <p>
+     Then it looks so much nicer to create an iterable of the values we want to filter on and join them with an apropriate regex operator (in this case
+     <code>
+      |
+     </code>
+     for
+     <em>
+      inclusive or
+     </em>
+     )
+    </p>
+    <div class="highlight">
+     <pre><span></span><code><span class="n">sandbox</span> <span class="err"></span>  <span class="n">main</span> <span class="n">via</span> <span class="mf">3.8.11</span><span class="p">(</span><span class="n">sandbox</span><span class="p">)</span> <span class="n">ipython</span>
+<span class="err">❯</span> <span class="n">vals</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"1"</span><span class="p">,</span> <span class="s2">"2"</span><span class="p">]</span>  <span class="c1"># iterable with whatever is appropriate for your use case</span>
+
+<span class="n">sandbox</span> <span class="err"></span>  <span class="n">main</span> <span class="n">via</span> <span class="mf">3.8.11</span><span class="p">(</span><span class="n">sandbox</span><span class="p">)</span> <span class="n">ipython</span>
+<span class="err">❯</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">A</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">"|"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">vals</span><span class="p">),</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+
+         <span class="n">A</span>
+<span class="mi">0</span>  <span class="n">string1</span>
+<span class="mi">1</span>  <span class="n">string2</span>
+</code></pre>
+    </div>
+    <h1 id="fin">
+     Fin
+     <a alt="id" class="heading-permalink" href="#fin" title="link to #fin">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h1>
+    <p>
+     This is a super nice and concise way to do the kind of filtering my team does on a daily basis!
+    </p>
+   </div>
+   <hr/>
+   <div id="show">
+   </div>
+  </article>
+  <footer>
+   <ul class="social">
+    <li>
+     <a href="https://twitter.com/pypeaday">
+      twitter
+     </a>
+    </li>
+    <li>
+     <a href="https://www.linkedin.com/in/nicpayne713/">
+      LinkedIn
+     </a>
+    </li>
+    <li>
+     <a href="https://github.com/nicpayne713">
+      GitHub
+     </a>
+    </li>
+    <li>
+     <a href="https://www.twitch.tv/pypeaday">
+      twitch
+     </a>
+    </li>
+   </ul>
+   <p>
+    © 2022 - 2022
+   </p>
+  </footer>
+ </body>
+</html>

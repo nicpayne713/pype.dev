@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width" name="viewport"/>
+  <link href="/bitmoji.ico" rel="icon" type="image/png"/>
+  <link href="https://pype.dev/polybar-01/amp/" rel="amphtml"/>
+  <meta content="$ilp.uphold.com/MGN2ni2YMXaQ" name="monetization" property="monetization"/>
+  <!-- <link rel='stylesheet' href='/fonts.css' />
+  <link rel='stylesheet' href='/archive-styles.css' />
+  <link rel='stylesheet' href='/article.css' /> -->
+  <link href="/main.css" rel="stylesheet"/>
+  <link as="style" href="/one-dark.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+  <link as="style" href="/furo-purge.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+  <!-- <link rel="preload" href="/scroll.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+  <noscript>
+   <!-- <link rel='stylesheet' href='/scroll.css' /> -->
+   <link href="/one-dark.min.css" rel="stylesheet"/>
+   <link href="/furo-purge.min.css" rel="stylesheet"/>
+  </noscript>
+  <link href="bitmoji_48x48.png" rel="apple-touch-icon" sizes="48x48"/>
+  <link href="bitmoji_72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+  <link href="bitmoji_96x96.png" rel="apple-touch-icon" sizes="96x96"/>
+  <link href="bitmoji_144x144.png" rel="apple-touch-icon" sizes="144x144"/>
+  <link href="bitmoji_192x192.png" rel="apple-touch-icon" sizes="192x192"/>
+  <link href="bitmoji_256x256.png" rel="apple-touch-icon" sizes="256x256"/>
+  <link href="bitmoji_384x384.png" rel="apple-touch-icon" sizes="384x384"/>
+  <link href="bitmoji_512x512.png" rel="apple-touch-icon" sizes="512x512"/>
+  <title>
+   Polybar-01
+  </title>
+  <meta content="article" name="og:type" property="og:type"/>
+  <meta content="Nicholas Payne" name="og:author" property="og:author"/>
+  <meta content="Nicholas Payne" name="og:site_name" property="og:site_name"/>
+  <meta content="#3A5895" name="theme-color"/>
+  <meta content="Nicholas Payne" name="og:author" property="og:author"/>
+  <meta content="pypeaday@pm.me" name="og:author_email" property="og:author_email"/>
+  <meta content="website" name="og:type" property="og:type"/>
+  <meta content="I use it with i3-gaps on Ubuntu for work and it makes my day just that much better to have a clean and elegant bar with the things in it that I care about. The " name="description" property="description"/>
+  <meta content="I use it with i3-gaps on Ubuntu for work and it makes my day just that much better to have a clean and elegant bar with the things in it that I care about. The " name="og:description" property="og:description"/>
+  <meta content="I use it with i3-gaps on Ubuntu for work and it makes my day just that much better to have a clean and elegant bar with the things in it that I care about. The " name="twitter:description" property="twitter:description"/>
+  <meta content="Polybar-01 | Pypeaday" name="og:title" property="og:title"/>
+  <meta content="Polybar-01 | Pypeaday" name="twitter:title" property="twitter:title"/>
+  <meta content="/static/images/polybar-01-og.png" name="og:image" property="og:image"/>
+  <meta content="/static/images/polybar-01-og.png" name="twitter:image" property="twitter:image"/>
+  <meta content="1600" name="og:image:width" property="og:image:width"/>
+  <meta content="900" name="og:image:width" property="og:image:width"/>
+  <meta content="summary_large_image" name="twitter:card" property="twitter:card"/>
+  <meta content="Pypeaday" name="og:site_name" property="og:site_name"/>
+  <meta content="@pypeaday" name="twitter:creator" property="twitter:creator"/>
+  <meta content="Polybar-01" name="title" property="title"/>
+  <meta content="markata 0.2.0" name="generator" property="generator"/>
+  <link href="https://pype.dev/polybar-01/" rel="canonical"/>
+  <meta content="https://pype.dev/polybar-01/" name="og:url" property="og:url"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="/static/images/polybar-01-og_250x140.png" name="og:sm_image" property="og:sm_image"/>
+  <meta content="/static/images/polybar-01-og_250x140.png" name="og:sm_image" property="og:sm_image"/>
+ </head>
+ <body>
+  <nav>
+   <ul>
+    <li>
+     <a href="/">
+      Home
+     </a>
+    </li>
+    <li>
+     <a href="/archive/">
+      Archive
+     </a>
+    </li>
+    <li>
+     <a aria-label="RSS" href="/rss.xml">
+      <svg class="icon" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+       <path d="M 4 4.44 v 2.83 c 7.03 0 12.73 5.7 12.73 12.73 h 2.83 c 0 -8.59 -6.97 -15.56 -15.56 -15.56 Z m 0 5.66 v 2.83 c 3.9 0 7.07 3.17 7.07 7.07 h 2.83 c 0 -5.47 -4.43 -9.9 -9.9 -9.9 Z M 6.18 15.64 A 2.18 2.18 0 0 1 6.18 20 A 2.18 2.18 0 0 1 6.18 15.64" fill="currentColor">
+       </path>
+      </svg>
+     </a>
+    </li>
+   </ul>
+  </nav>
+  <article class="blog-post h-entry">
+   <!-- <div id='cover-wrapper'>
+      <img src='/polybar-01.webp' alt='cover image for article' />
+    </div> -->
+   <div id="title-wrapper">
+    <a class="u-url" href="https://pype.dev/polybar-01/">
+     <h1 class="flair" id="title" style="text-align:right;z-index:2;padding-right:.2rem">
+      Polybar-01
+     </h1>
+    </a>
+    <p>
+     <time class="dt-published post-date" datetime="2022-04-01" style="text-align:right;z-index:2">
+      2022-04-01
+     </time>
+    </p>
+    <div class="h-card p-author" rel="author">
+     <div class="content">
+      <a class="p-name u-url" href="https://pype.dev/">
+       <p>
+        <span class="p-given-name">
+         Nicholas
+        </span>
+        <span class="p-family-name">
+         Payne
+        </span>
+       </p>
+      </a>
+      <p class="p-note">
+       Goofing off
+       <a href="https://twitter.com/pypeaday">
+        @pypeaday
+       </a>
+      </p>
+     </div>
+    </div>
+    <!-- edit -->
+    <p>
+     <a alt="edit post url" href="https://github.com/nicpayne713/mental-data-lake/edit/main/pages/blog/polybar-01.md" title="edit this post">
+      edit
+      <span aria-label="" role="img">
+       ✏️
+      </span>
+     </a>
+    </p>
+   </div>
+   <!-- <h2 class='toc'>toc</h2> -->
+   <!-- <div class="toc">
+<ul>
+<li><a href="#abcmeta">ABCMeta</a></li>
+</ul>
+</div>
+ -->
+   <div id="post-body">
+    <p>
+     <a href="https://github.com/polybar/polybar">
+      polybar
+     </a>
+     is an awesome and super customizable status bar for your desktop environment.
+    </p>
+    <p>
+     I use it with i3-gaps on Ubuntu for work and it makes my day just that much better to have a clean and elegant bar with the things in it that I care about.
+    </p>
+    <p>
+     The GitHub has all the instructions you'd need to install and get started with an example.
+    </p>
+    <p>
+     I want to make some notes about how I use polybar and customize it.
+    </p>
+    <h2 id="organization">
+     Organization
+     <a alt="id" class="heading-permalink" href="#organization" title="link to #organization">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h2>
+    <p>
+     First of all, I recently moved my polybar config out of one config file into a modular structure that keeps my config files small and easiser to edit.
+    </p>
+    <p>
+     You can find my config
+     <a href="https://github.com/nicpayne713/dotfiles/tree/main/polybar">
+      here
+     </a>
+    </p>
+    <p>
+     The apps or services you put into polybar are called
+     <code>
+      modules
+     </code>
+     .
+I have moved all of my modules into their own config files and I source them with one centralized
+     <code>
+      include-modules.ini
+     </code>
+     config.
+    </p>
+    <p>
+     This separation also makes it easier for me to keep my home and work polybars as in sync as possible without duplicating a ton of config!
+    </p>
+    <div class="highlight">
+     <pre><span></span><code>./polybar
+├── colors.ini
+├── config.ini
+├── fonts.ini
+├── home-modules.ini
+├── include-modules.ini
+├── launch.sh
+├── modules
+│   ├── aws.ini
+│   ├── battery.ini
+│   ├── bluetooth.ini
+│   ├── cisco.ini
+│   ├── cpu.ini
+│   ├── date.ini
+│   ├── eth.ini
+│   ├── eth_work.ini
+│   ├── i3.ini
+│   ├── memory.ini
+│   ├── nm-editor.ini
+│   ├── powermenu.ini
+│   ├── pulseaudio-control.ini
+│   ├── pulseaudio.ini
+│   ├── rofi.ini
+│   ├── vpn.ini
+│   └── wlan.ini
+└── work-modules.ini
+
+<span class="m">1</span> directory, <span class="m">24</span> files
+</code></pre>
+    </div>
+    <p>
+     To break this down there are several configs to see:
+    </p>
+    <ol>
+     <li>
+      <code>
+       colors.ini
+      </code>
+      is what you'd expect - a set of defined colors like
+      <code>
+       foreground
+      </code>
+      ,
+      <code>
+       underline
+      </code>
+      , etc.
+     </li>
+     <li>
+      <code>
+       config.ini
+      </code>
+      is the general polybar config file where bars are defined. Currently in mine there is a
+      <code>
+       work
+      </code>
+      and
+      <code>
+       home
+      </code>
+      bar defined with the modules sourced in from the explicit config files.
+     </li>
+     <li>
+      <code>
+       fonts.ini
+      </code>
+      is like
+      <code>
+       colors.ini
+      </code>
+      -&gt; you put fonts here. I recommend using a font patched with NerdFont so you get fancy icons! (I use JetBrains Mono)
+     </li>
+     <li>
+      <code>
+       include-modules.ini
+      </code>
+      is where I list out all the config files in
+      <code>
+       modules/
+      </code>
+      so I can basically source just the
+      <code>
+       include-modules.ini
+      </code>
+      without explicitly sourcing every module's config in every polybar defintion.
+     </li>
+     <li>
+      <code>
+       launch.sh
+      </code>
+      is a simple shell script to launch the polybar! You'll see mine takes multiple monitors into consideration which I manage via environment variables setup in my
+      <code>
+       .zshenv
+      </code>
+      file that is different for my work and home setups.
+     </li>
+     <li>
+      Finally there are
+      <code>
+       home-modules.ini
+      </code>
+      and
+      <code>
+       work-modules.ini
+      </code>
+      which is where, for each of my bars, I define which modules I want!
+     </li>
+    </ol>
+    <h2 id="config">
+     Config
+     <a alt="id" class="heading-permalink" href="#config" title="link to #config">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h2>
+    <p>
+     My
+     <code>
+      config.ini
+     </code>
+     file has 2 bar definitions in it - here's my home one:
+    </p>
+    <div class="highlight">
+     <pre><span></span><code><span class="na">include-file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">$DOTFILES/polybar/include-modules.ini</span><span class="w"></span>
+
+<span class="k">[bar/home]</span><span class="w"></span>
+<span class="na">monitor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">${env:MONITOR:}</span><span class="w"></span>
+<span class="na">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">100%</span><span class="w"></span>
+<span class="na">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">25</span><span class="w"></span>
+<span class="na">radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">8.0</span><span class="w"></span>
+<span class="na">fixed-center</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">true</span><span class="w"></span>
+<span class="na">bottom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">false</span><span class="w"></span>
+
+<span class="na">background</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">${colors.background}</span><span class="w"></span>
+<span class="na">foreground</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">${colors.foreground}</span><span class="w"></span>
+
+<span class="na">include-file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">$DOTFILES/polybar/fonts.ini</span><span class="w"></span>
+<span class="na">include-file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">$DOTFILES/polybar/home-modules.ini</span><span class="w"></span>
+</code></pre>
+    </div>
+    <p>
+     It should be easy to follow - I bring in the
+     <code>
+      include-modules
+     </code>
+     , set a few colors for the bar like
+     <code>
+      background
+     </code>
+     and
+     <code>
+      foreground
+     </code>
+     which are sourced by the
+     <code>
+      colors.ini
+     </code>
+     , and finally bring in my fonts and home modules via their config files!
+    </p>
+    <p>
+     It's super easy to then change one or two things in the appropriate places rather than combing through one massive config. This also makes it easy for me to seperate my work and home setups.
+    </p>
+    <h2 id="modules">
+     Modules
+     <a alt="id" class="heading-permalink" href="#modules" title="link to #modules">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h2>
+    <p>
+     There are several builtin modules, like
+     <code>
+      wlan
+     </code>
+     which gives your wifi status right there in polybar.
+    </p>
+    <p>
+     You can also make custom ones. 
+A big-time custom one for me is an indicator of whether or not I have an active AWS token for working with the
+     <code>
+      aws
+     </code>
+     cli.
+    </p>
+    <p>
+     This is defined in
+     <code>
+      modules/aws.ini
+     </code>
+     and it looks like this:
+    </p>
+    <div class="highlight">
+     <pre><span></span><code><span class="k">[module/aws]</span><span class="w"></span>
+<span class="na">interval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">5.0</span><span class="w"></span>
+<span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">custom/script</span><span class="w"></span>
+<span class="na">exec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">has_aws_token</span><span class="w"></span>
+<span class="na">click-left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">$HOME/.local/bin/auto_get_aws_token</span><span class="w"></span>
+<span class="na">click-right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">rm -rf ~/.aws/credentials</span><span class="w"></span>
+</code></pre>
+    </div>
+    <p>
+     Every
+     <code>
+      5
+     </code>
+     seconds my
+     <code>
+      has_aws_token
+     </code>
+     script is ran.
+That script looks like this:
+    </p>
+    <div class="highlight">
+     <pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nb">source</span> auto_proxy
+aws sts get-caller-identity <span class="p">&amp;</span>&gt; /dev/null <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">"%{T5}%{F#00ff00}  %{F-}%{T-}"</span>  <span class="o">||(</span> <span class="nb">echo</span> <span class="s2">"%{T5}%{F#ff0000} %{F-}%{T-}"</span> <span class="o">)</span>
+</code></pre>
+    </div>
+    <p>
+     See how the script echos out a colored icon to indicate the status of my token -&gt; that icon is displayed in the polybar so I have real-time (5 second latency) status of whether or not I can do things in my AWS environment.
+    </p>
+    <p>
+     In the module I also configured actions for
+     <code>
+      click-left
+     </code>
+     and
+     <code>
+      click-right
+     </code>
+     which are as straight forward as could be.
+    </p>
+    <h2 id="my-issues-with-i3">
+     My issues with i3
+     <a alt="id" class="heading-permalink" href="#my-issues-with-i3" title="link to #my-issues-with-i3">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h2>
+    <p>
+     There's a few things to be considerate of if you use
+     <code>
+      i3
+     </code>
+     such as needing a workaround for a centered bar that
+     <strong>
+      is not
+     </strong>
+     the full width of the monitor.
+Polybar can look really nice by not taking up the full width of the bar which you can configure in
+     <code>
+      config.ini
+     </code>
+     with these options:
+    </p>
+    <div class="highlight">
+     <pre><span></span><code><span class="na">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">90%</span><span class="w"></span>
+<span class="na">offset-x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">5%  # set to (100 - width) / 2</span><span class="w"></span>
+</code></pre>
+    </div>
+    <p>
+     However due to an issue with polybar and i3 you need to also set
+     <code>
+      override-redirect = true
+     </code>
+     . 
+BUT then you'll notice that the bar overlaps your i3 windows... ARGH! what do we do?
+    </p>
+    <p>
+     Quick work around is to set
+     <code>
+      gaps top
+     </code>
+     in your i3 config if you use i3-gaps... if not? well, idk... use gaps... lol
+    </p>
+    <p>
+     However this introduces another issue - which is then full screen windows will  have polybar sitting on top of them...
+    </p>
+    <p>
+     This isn't necessarily a deal breaker, but for me it's worth it to just have the bar go 100% width.
+    </p>
+    <h2 id="fin">
+     FIN
+     <a alt="id" class="heading-permalink" href="#fin" title="link to #fin">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h2>
+    <p>
+     There's a tiny intro to polybar and how I organize my config files so things are easy to edit and manage!
+Feel free to grab mine and try it out!
+    </p>
+   </div>
+   <hr/>
+   <div id="show">
+   </div>
+  </article>
+  <footer>
+   <ul class="social">
+    <li>
+     <a href="https://twitter.com/pypeaday">
+      twitter
+     </a>
+    </li>
+    <li>
+     <a href="https://www.linkedin.com/in/nicpayne713/">
+      LinkedIn
+     </a>
+    </li>
+    <li>
+     <a href="https://github.com/nicpayne713">
+      GitHub
+     </a>
+    </li>
+    <li>
+     <a href="https://www.twitch.tv/pypeaday">
+      twitch
+     </a>
+    </li>
+   </ul>
+   <p>
+    © 2022 - 2022
+   </p>
+  </footer>
+ </body>
+</html>

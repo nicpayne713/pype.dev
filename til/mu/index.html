@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width" name="viewport"/>
+  <link href="/bitmoji.ico" rel="icon" type="image/png"/>
+  <link href="https://pype.dev/til/mu/amp/" rel="amphtml"/>
+  <meta content="$ilp.uphold.com/MGN2ni2YMXaQ" name="monetization" property="monetization"/>
+  <!-- <link rel='stylesheet' href='/fonts.css' />
+  <link rel='stylesheet' href='/archive-styles.css' />
+  <link rel='stylesheet' href='/article.css' /> -->
+  <link href="/main.css" rel="stylesheet"/>
+  <link as="style" href="/one-dark.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+  <link as="style" href="/furo-purge.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+  <!-- <link rel="preload" href="/scroll.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+  <noscript>
+   <!-- <link rel='stylesheet' href='/scroll.css' /> -->
+   <link href="/one-dark.min.css" rel="stylesheet"/>
+   <link href="/furo-purge.min.css" rel="stylesheet"/>
+  </noscript>
+  <link href="bitmoji_48x48.png" rel="apple-touch-icon" sizes="48x48"/>
+  <link href="bitmoji_72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+  <link href="bitmoji_96x96.png" rel="apple-touch-icon" sizes="96x96"/>
+  <link href="bitmoji_144x144.png" rel="apple-touch-icon" sizes="144x144"/>
+  <link href="bitmoji_192x192.png" rel="apple-touch-icon" sizes="192x192"/>
+  <link href="bitmoji_256x256.png" rel="apple-touch-icon" sizes="256x256"/>
+  <link href="bitmoji_384x384.png" rel="apple-touch-icon" sizes="384x384"/>
+  <link href="bitmoji_512x512.png" rel="apple-touch-icon" sizes="512x512"/>
+  <title>
+   Mu
+  </title>
+  <meta content="article" name="og:type" property="og:type"/>
+  <meta content="Nicholas Payne" name="og:author" property="og:author"/>
+  <meta content="Nicholas Payne" name="og:site_name" property="og:site_name"/>
+  <meta content="#3A5895" name="theme-color"/>
+  <meta content="Nicholas Payne" name="og:author" property="og:author"/>
+  <meta content="pypeaday@pm.me" name="og:author_email" property="og:author_email"/>
+  <meta content="website" name="og:type" property="og:type"/>
+  <meta content="If you work with a template for several projects then you might sometimes need to do the same action across all repos. mu status mu sh mu stash There mu As you " name="description" property="description"/>
+  <meta content="If you work with a template for several projects then you might sometimes need to do the same action across all repos. mu status mu sh mu stash There mu As you " name="og:description" property="og:description"/>
+  <meta content="If you work with a template for several projects then you might sometimes need to do the same action across all repos. mu status mu sh mu stash There mu As you " name="twitter:description" property="twitter:description"/>
+  <meta content="Mu | Pypeaday" name="og:title" property="og:title"/>
+  <meta content="Mu | Pypeaday" name="twitter:title" property="twitter:title"/>
+  <meta content="/static/images/til/mu-og.png" name="og:image" property="og:image"/>
+  <meta content="/static/images/til/mu-og.png" name="twitter:image" property="twitter:image"/>
+  <meta content="1600" name="og:image:width" property="og:image:width"/>
+  <meta content="900" name="og:image:width" property="og:image:width"/>
+  <meta content="summary_large_image" name="twitter:card" property="twitter:card"/>
+  <meta content="Pypeaday" name="og:site_name" property="og:site_name"/>
+  <meta content="@pypeaday" name="twitter:creator" property="twitter:creator"/>
+  <meta content="Mu" name="title" property="title"/>
+  <meta content="markata 0.2.0" name="generator" property="generator"/>
+  <link href="https://pype.dev/til/mu/" rel="canonical"/>
+  <meta content="https://pype.dev/til/mu/" name="og:url" property="og:url"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="/static/images/til/mu-og_250x140.png" name="og:sm_image" property="og:sm_image"/>
+  <meta content="/static/images/til/mu-og_250x140.png" name="og:sm_image" property="og:sm_image"/>
+ </head>
+ <body>
+  <nav>
+   <ul>
+    <li>
+     <a href="/">
+      Home
+     </a>
+    </li>
+    <li>
+     <a href="/archive/">
+      Archive
+     </a>
+    </li>
+    <li>
+     <a aria-label="RSS" href="/rss.xml">
+      <svg class="icon" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+       <path d="M 4 4.44 v 2.83 c 7.03 0 12.73 5.7 12.73 12.73 h 2.83 c 0 -8.59 -6.97 -15.56 -15.56 -15.56 Z m 0 5.66 v 2.83 c 3.9 0 7.07 3.17 7.07 7.07 h 2.83 c 0 -5.47 -4.43 -9.9 -9.9 -9.9 Z M 6.18 15.64 A 2.18 2.18 0 0 1 6.18 20 A 2.18 2.18 0 0 1 6.18 15.64" fill="currentColor">
+       </path>
+      </svg>
+     </a>
+    </li>
+   </ul>
+  </nav>
+  <article class="blog-post h-entry">
+   <!-- <div id='cover-wrapper'>
+      <img src='/til/mu.webp' alt='cover image for article' />
+    </div> -->
+   <div id="title-wrapper">
+    <a class="u-url" href="https://pype.dev/til/mu/">
+     <h1 class="flair" id="title" style="text-align:right;z-index:2;padding-right:.2rem">
+      Mu
+     </h1>
+    </a>
+    <p>
+     <time class="dt-published post-date" datetime="2022-03-15" style="text-align:right;z-index:2">
+      2022-03-15
+     </time>
+    </p>
+    <div class="h-card p-author" rel="author">
+     <div class="content">
+      <a class="p-name u-url" href="https://pype.dev/">
+       <p>
+        <span class="p-given-name">
+         Nicholas
+        </span>
+        <span class="p-family-name">
+         Payne
+        </span>
+       </p>
+      </a>
+      <p class="p-note">
+       Goofing off
+       <a href="https://twitter.com/pypeaday">
+        @pypeaday
+       </a>
+      </p>
+     </div>
+    </div>
+    <!-- edit -->
+    <p>
+     <a alt="edit post url" href="https://github.com/nicpayne713/mental-data-lake/edit/main/pages/blog/til/mu.md" title="edit this post">
+      edit
+      <span aria-label="" role="img">
+       ✏️
+      </span>
+     </a>
+    </p>
+   </div>
+   <!-- <h2 class='toc'>toc</h2> -->
+   <!-- <div class="toc">
+<ul>
+<li><a href="#abcmeta">ABCMeta</a></li>
+</ul>
+</div>
+ -->
+   <div id="post-body">
+    <p>
+     If you work with a template for several projects then you might sometimes need to do the same action across all repos.
+A good example of this is updating a package in
+     <code>
+      requirements.txt
+     </code>
+     in every project, or refactoring a common module.
+If you have several repos to do this across then it can be time consuming... enter
+     <code>
+      mu-repo
+     </code>
+    </p>
+    <h2 id="mu">
+     Mu
+     <a alt="id" class="heading-permalink" href="#mu" title="link to #mu">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h2>
+    <p>
+     <a href="https://fabioz.github.io/mu-repo/">
+      mu-repo
+     </a>
+     is an awesome cli tool for working with multiple git repositories at the same time. 
+There are several things you can do:
+    </p>
+    <ol>
+     <li>
+      <code>
+       mu status
+      </code>
+      will give you the
+      <code>
+       git status
+      </code>
+      of every registered repo (see below)
+     </li>
+     <li>
+      <code>
+       mu sh
+      </code>
+      will let you execute system level commands in every repo
+     </li>
+     <li>
+      <code>
+       mu stash
+      </code>
+      will stash all changes across all registered repos
+     </li>
+     <li>
+      There's literally a ton more but these are some handy ones
+     </li>
+    </ol>
+    <h2 id="registration">
+     Registration
+     <a alt="id" class="heading-permalink" href="#registration" title="link to #registration">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h2>
+    <p>
+     <code>
+      mu
+     </code>
+     tracks its own
+     <code>
+      groups
+     </code>
+     , and there is a default group when no particular one is active.
+It's as simple as
+     <code>
+      mu register proj1 prog2 ...
+     </code>
+     to get repos registered
+    </p>
+    <div class="highlight">
+     <pre><span></span><code>❯ mu register proj1 proj2
+Repository: proj1 registered
+Repository: proj2 registered
+
+❯ mu status
+
+  proj1 : git status
+    On branch main
+
+    No commits yet
+
+    Untracked files:
+    <span class="o">(</span>use <span class="s2">"git add &lt;file&gt;..."</span> to include <span class="k">in</span> what will be committed<span class="o">)</span>
+    requirements.txt
+
+    nothing added to commit but untracked files present <span class="o">(</span>use <span class="s2">"git add"</span> to track<span class="o">)</span>
+
+  proj2 : git status
+    On branch main
+
+    No commits yet
+
+    Changes to be committed:
+    <span class="o">(</span>use <span class="s2">"git rm --cached &lt;file&gt;..."</span> to unstage<span class="o">)</span>
+    new file:   requirements.txt
+</code></pre>
+    </div>
+    <h2 id="working-with-mu">
+     Working with mu
+     <a alt="id" class="heading-permalink" href="#working-with-mu" title="link to #working-with-mu">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h2>
+    <p>
+     As you can see above I have two projects each with a
+     <code>
+      requirements.txt
+     </code>
+     added but not committed yet.
+Using
+     <code>
+      mu
+     </code>
+     I can stage this change across both repos at once.
+    </p>
+    <div class="highlight">
+     <pre><span></span><code>❯ mu add requirements.txt
+
+  proj1 : git add requirements.txt
+
+  proj2 : git add requirements.txt
+</code></pre>
+    </div>
+    <p>
+     Then as you might imagine, I can make the commit in each repo
+    </p>
+    <div class="highlight">
+     <pre><span></span><code>❯ mu commit -m <span class="s2">"Add requirements.txts"</span>
+
+  proj1 : git commit -m Add requirements.txts
+    <span class="o">[</span>main <span class="o">(</span>root-commit<span class="o">)</span> 18376d7<span class="o">]</span> Add requirements.txts
+    <span class="m">1</span> file changed, <span class="m">1</span> insertion<span class="o">(</span>+<span class="o">)</span>
+    create mode <span class="m">100644</span> requirements.txt
+
+  proj2 : git commit -m Add requirements.txts
+    <span class="o">[</span>main <span class="o">(</span>root-commit<span class="o">)</span> 18376d7<span class="o">]</span> Add requirements.txts
+    <span class="m">1</span> file changed, <span class="m">1</span> insertion<span class="o">(</span>+<span class="o">)</span>
+    create mode <span class="m">100644</span> requirements.txt
+</code></pre>
+    </div>
+    <h2 id="mu-groups">
+     mu groups
+     <a alt="id" class="heading-permalink" href="#mu-groups" title="link to #mu-groups">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h2>
+    <p>
+     The other thing I got a lot of use out of recently was
+     <code>
+      mu
+     </code>
+     's groups.
+At work I have about 40 repos cloned that are all based on the same kedro pipeline template.
+Some of these projects have been deprecated.
+I also have several more repos that are not kedro template - custom libraries or something.
+     <code>
+      group
+     </code>
+     let me utilize
+     <code>
+      mu
+     </code>
+     across different groups of repos.
+    </p>
+    <p>
+     Say
+     <code>
+      proj2
+     </code>
+     is a deprecated project that I don't need to worry about making changes to anymore.
+I don't just have to unregister it, instead I can make a group called "active" and register
+     <code>
+      proj1
+     </code>
+     in that group
+    </p>
+    <div class="highlight">
+     <pre><span></span><code>❯ mu group add active --empty
+
+~/personal
+❯ mu group add deprecated --empty
+
+~/personal
+❯ mu group
+  active
+* deprecated
+</code></pre>
+    </div>
+    <p>
+     The
+     <code>
+      *
+     </code>
+     tells me which group is active. 
+The
+     <code>
+      --empty
+     </code>
+     flag tells
+     <code>
+      mu
+     </code>
+     to not add all registered repos to that group.
+If I don't want to use any groups then
+     <code>
+      mu group reset
+     </code>
+     will go back to the default group with all registered repos.
+    </p>
+    <p>
+     With groups I can register only the repos that I want to be working across in their own group and not worry about affecting other repos with my batch changes!
+    </p>
+   </div>
+   <hr/>
+   <div id="show">
+   </div>
+  </article>
+  <footer>
+   <ul class="social">
+    <li>
+     <a href="https://twitter.com/pypeaday">
+      twitter
+     </a>
+    </li>
+    <li>
+     <a href="https://www.linkedin.com/in/nicpayne713/">
+      LinkedIn
+     </a>
+    </li>
+    <li>
+     <a href="https://github.com/nicpayne713">
+      GitHub
+     </a>
+    </li>
+    <li>
+     <a href="https://www.twitch.tv/pypeaday">
+      twitch
+     </a>
+    </li>
+   </ul>
+   <p>
+    © 2022 - 2022
+   </p>
+  </footer>
+ </body>
+</html>

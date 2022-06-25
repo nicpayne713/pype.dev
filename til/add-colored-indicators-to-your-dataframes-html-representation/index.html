@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width" name="viewport"/>
+  <link href="/bitmoji.ico" rel="icon" type="image/png"/>
+  <link href="https://pype.dev/til/add-colored-indicators-to-your-dataframes-html-representation/amp/" rel="amphtml"/>
+  <meta content="$ilp.uphold.com/MGN2ni2YMXaQ" name="monetization" property="monetization"/>
+  <!-- <link rel='stylesheet' href='/fonts.css' />
+  <link rel='stylesheet' href='/archive-styles.css' />
+  <link rel='stylesheet' href='/article.css' /> -->
+  <link href="/main.css" rel="stylesheet"/>
+  <link as="style" href="/one-dark.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+  <link as="style" href="/furo-purge.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+  <!-- <link rel="preload" href="/scroll.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+  <noscript>
+   <!-- <link rel='stylesheet' href='/scroll.css' /> -->
+   <link href="/one-dark.min.css" rel="stylesheet"/>
+   <link href="/furo-purge.min.css" rel="stylesheet"/>
+  </noscript>
+  <link href="bitmoji_48x48.png" rel="apple-touch-icon" sizes="48x48"/>
+  <link href="bitmoji_72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+  <link href="bitmoji_96x96.png" rel="apple-touch-icon" sizes="96x96"/>
+  <link href="bitmoji_144x144.png" rel="apple-touch-icon" sizes="144x144"/>
+  <link href="bitmoji_192x192.png" rel="apple-touch-icon" sizes="192x192"/>
+  <link href="bitmoji_256x256.png" rel="apple-touch-icon" sizes="256x256"/>
+  <link href="bitmoji_384x384.png" rel="apple-touch-icon" sizes="384x384"/>
+  <link href="bitmoji_512x512.png" rel="apple-touch-icon" sizes="512x512"/>
+  <title>
+   Add colored indicators to your dataframes html representation
+  </title>
+  <meta content="article" name="og:type" property="og:type"/>
+  <meta content="Nicholas Payne" name="og:author" property="og:author"/>
+  <meta content="Nicholas Payne" name="og:site_name" property="og:site_name"/>
+  <meta content="#3A5895" name="theme-color"/>
+  <meta content="Nicholas Payne" name="og:author" property="og:author"/>
+  <meta content="pypeaday@pm.me" name="og:author_email" property="og:author_email"/>
+  <meta content="website" name="og:type" property="og:type"/>
+  <meta content="First though... why? The docs for the  So we can write a function that returns  By default the function will be applied to all columns of the dataframe, but Con" name="description" property="description"/>
+  <meta content="First though... why? The docs for the  So we can write a function that returns  By default the function will be applied to all columns of the dataframe, but Con" name="og:description" property="og:description"/>
+  <meta content="First though... why? The docs for the  So we can write a function that returns  By default the function will be applied to all columns of the dataframe, but Con" name="twitter:description" property="twitter:description"/>
+  <meta content="Add colored indicators to your dataframes html representatio" name="og:title" property="og:title"/>
+  <meta content="Add colored indicators to your dataframes html representatio" name="twitter:title" property="twitter:title"/>
+  <meta content="/static/images/til/add-colored-indicators-to-your-dataframes-html-representation-og.png" name="og:image" property="og:image"/>
+  <meta content="/static/images/til/add-colored-indicators-to-your-dataframes-html-representation-og.png" name="twitter:image" property="twitter:image"/>
+  <meta content="1600" name="og:image:width" property="og:image:width"/>
+  <meta content="900" name="og:image:width" property="og:image:width"/>
+  <meta content="summary_large_image" name="twitter:card" property="twitter:card"/>
+  <meta content="Pypeaday" name="og:site_name" property="og:site_name"/>
+  <meta content="@pypeaday" name="twitter:creator" property="twitter:creator"/>
+  <meta content="Add colored indicators to your dataframes html representation" name="title" property="title"/>
+  <meta content="markata 0.2.0" name="generator" property="generator"/>
+  <link href="https://pype.dev/til/add-colored-indicators-to-your-dataframes-html-representation/" rel="canonical"/>
+  <meta content="https://pype.dev/til/add-colored-indicators-to-your-dataframes-html-representation/" name="og:url" property="og:url"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="/static/images/til/add-colored-indicators-to-your-dataframes-html-representation-og_250x140.png" name="og:sm_image" property="og:sm_image"/>
+  <meta content="/static/images/til/add-colored-indicators-to-your-dataframes-html-representation-og_250x140.png" name="og:sm_image" property="og:sm_image"/>
+ </head>
+ <body>
+  <nav>
+   <ul>
+    <li>
+     <a href="/">
+      Home
+     </a>
+    </li>
+    <li>
+     <a href="/archive/">
+      Archive
+     </a>
+    </li>
+    <li>
+     <a aria-label="RSS" href="/rss.xml">
+      <svg class="icon" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+       <path d="M 4 4.44 v 2.83 c 7.03 0 12.73 5.7 12.73 12.73 h 2.83 c 0 -8.59 -6.97 -15.56 -15.56 -15.56 Z m 0 5.66 v 2.83 c 3.9 0 7.07 3.17 7.07 7.07 h 2.83 c 0 -5.47 -4.43 -9.9 -9.9 -9.9 Z M 6.18 15.64 A 2.18 2.18 0 0 1 6.18 20 A 2.18 2.18 0 0 1 6.18 15.64" fill="currentColor">
+       </path>
+      </svg>
+     </a>
+    </li>
+   </ul>
+  </nav>
+  <article class="blog-post h-entry">
+   <!-- <div id='cover-wrapper'>
+      <img src='/til/add-colored-indicators-to-your-dataframes-html-representation.webp' alt='cover image for article' />
+    </div> -->
+   <div id="title-wrapper">
+    <a class="u-url" href="https://pype.dev/til/add-colored-indicators-to-your-dataframes-html-representation/">
+     <h1 class="flair" id="title" style="text-align:right;z-index:2;padding-right:.2rem">
+      Add colored indicators to your dataframes html representation
+     </h1>
+    </a>
+    <p>
+     <time class="dt-published post-date" datetime="2022-06-04" style="text-align:right;z-index:2">
+      2022-06-04
+     </time>
+    </p>
+    <div class="h-card p-author" rel="author">
+     <div class="content">
+      <a class="p-name u-url" href="https://pype.dev/">
+       <p>
+        <span class="p-given-name">
+         Nicholas
+        </span>
+        <span class="p-family-name">
+         Payne
+        </span>
+       </p>
+      </a>
+      <p class="p-note">
+       Goofing off
+       <a href="https://twitter.com/pypeaday">
+        @pypeaday
+       </a>
+      </p>
+     </div>
+    </div>
+    <!-- edit -->
+    <p>
+     <a alt="edit post url" href="https://github.com/nicpayne713/mental-data-lake/edit/main/pages/blog/til/add-colored-indicators-to-your-dataframes-html-representation.md" title="edit this post">
+      edit
+      <span aria-label="" role="img">
+       ✏️
+      </span>
+     </a>
+    </p>
+   </div>
+   <!-- <h2 class='toc'>toc</h2> -->
+   <!-- <div class="toc">
+<ul>
+<li><a href="#abcmeta">ABCMeta</a></li>
+</ul>
+</div>
+ -->
+   <div id="post-body">
+    <p>
+     <a href="https://twitter.com/driscollis">
+      Mike Driscoll
+     </a>
+     recently tweeted about making
+colored out with pandas DataFrames and I just had to try it for myself
+    </p>
+    <h1 id="use-case">
+     Use Case
+     <a alt="id" class="heading-permalink" href="#use-case" title="link to #use-case">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h1>
+    <p>
+     First though... why?
+My biggest use case is a monitoring pipeline of mine... The details aside, the
+output of my pipeline is a dataframe where each row has information about a
+failed pipeline that I need to go look into. I dump that result to a simle html
+file that's hosted on an internal site and the file is updated every couple of
+hours. Adding some colored indicators automatically to the rows to help me
+assess severity of each record would be a handy way to quickly get an
+understanding the state of our pipelines.
+    </p>
+    <h1 id="how">
+     How?
+     <a alt="id" class="heading-permalink" href="#how" title="link to #how">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h1>
+    <p>
+     The docs for the
+     <code>
+      applymap
+     </code>
+     method state simply:
+    </p>
+    <div class="highlight">
+     <pre><span></span><code>Apply a CSS-styling function elementwise.
+
+Updates the HTML representation with the result.
+</code></pre>
+    </div>
+    <p>
+     So we can write a function that returns
+     <code>
+      color: {color}
+     </code>
+     based on the dataframe
+values and when we drop that dataframe to html we'll have some simple css
+styling applied automagically!
+    </p>
+    <p>
+     By default the function will be applied to all columns of the dataframe, but
+that's not useful if the columns are different types which is usually the case.
+Luckily there is a
+     <code>
+      subset
+     </code>
+     keyword to only apply to the columns you need!
+    </p>
+    <p>
+     Consider my example
+    </p>
+    <div class="highlight">
+     <pre><span></span><code><span class="n">sandbox</span> <span class="err"></span>  <span class="n">main</span> <span class="n">via</span> <span class="mf">3.8.11</span><span class="p">(</span><span class="n">sandbox</span><span class="p">)</span> <span class="n">ipython</span>
+<span class="err">❯</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"cars.csv"</span><span class="p">)</span>
+
+<span class="n">sandbox</span> <span class="err"></span>  <span class="n">main</span> <span class="n">via</span> <span class="mf">3.8.11</span><span class="p">(</span><span class="n">sandbox</span><span class="p">)</span> <span class="n">ipython</span>
+<span class="err">❯</span> <span class="k">def</span> <span class="nf">mpg_color</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+<span class="o">...</span><span class="p">:</span>     <span class="n">color</span> <span class="o">=</span> <span class="s2">"red"</span> <span class="k">if</span> <span class="n">val</span> <span class="o">&lt;</span> <span class="mi">21</span> <span class="k">else</span> <span class="s2">"green"</span>
+<span class="o">...</span><span class="p">:</span>     <span class="k">return</span> <span class="sa">f</span><span class="s2">"color: </span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="s2">"</span>
+
+<span class="n">sandbox</span> <span class="err"></span>  <span class="n">main</span> <span class="n">via</span> <span class="mf">3.8.11</span><span class="p">(</span><span class="n">sandbox</span><span class="p">)</span> <span class="n">ipython</span>
+<span class="err">❯</span> <span class="n">df</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">applymap</span><span class="p">(</span><span class="n">mpg_color</span><span class="p">,</span> <span class="n">subset</span><span class="o">=</span><span class="s2">"mpg"</span><span class="p">)</span><span class="o">.</span><span class="n">to_html</span><span class="p">(</span><span class="s2">"color.html"</span><span class="p">)</span>
+</code></pre>
+    </div>
+    <p>
+     I want to quickly see if the
+     <code>
+      mpg
+     </code>
+     is any good for the cars in the cars dataset
+and I'll define "good" as better than 21 mpg (not great I know but just for the
+sake of discussion...)
+    </p>
+    <p>
+     The function returns an appropriate css string and after I
+     <code>
+      style.applymap
+     </code>
+     on just the
+     <code>
+      mpg
+     </code>
+     column we get this!
+    </p>
+    <style type="text/css">
+     #T_95e99_row0_col1, #T_95e99_row1_col1, #T_95e99_row2_col1, #T_95e99_row3_col1 {
+  color: green;
+}
+#T_95e99_row4_col1 {
+  color: red;
+}
+    </style>
+    <table id="T_95e99">
+     <thead>
+      <tr>
+       <th class="blank level0">
+       </th>
+       <th class="col_heading level0 col0" id="T_95e99_level0_col0">
+        Unnamed: 0
+       </th>
+       <th class="col_heading level0 col1" id="T_95e99_level0_col1">
+        mpg
+       </th>
+       <th class="col_heading level0 col2" id="T_95e99_level0_col2">
+        cyl
+       </th>
+       <th class="col_heading level0 col3" id="T_95e99_level0_col3">
+        disp
+       </th>
+       <th class="col_heading level0 col4" id="T_95e99_level0_col4">
+        hp
+       </th>
+       <th class="col_heading level0 col5" id="T_95e99_level0_col5">
+        drat
+       </th>
+       <th class="col_heading level0 col6" id="T_95e99_level0_col6">
+        wt
+       </th>
+       <th class="col_heading level0 col7" id="T_95e99_level0_col7">
+        qsec
+       </th>
+       <th class="col_heading level0 col8" id="T_95e99_level0_col8">
+        vs
+       </th>
+       <th class="col_heading level0 col9" id="T_95e99_level0_col9">
+        am
+       </th>
+       <th class="col_heading level0 col10" id="T_95e99_level0_col10">
+        gear
+       </th>
+       <th class="col_heading level0 col11" id="T_95e99_level0_col11">
+        carb
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <th class="row_heading level0 row0" id="T_95e99_level0_row0">
+        0
+       </th>
+       <td class="data row0 col0" id="T_95e99_row0_col0">
+        Mazda RX4
+       </td>
+       <td class="data row0 col1" id="T_95e99_row0_col1">
+        21.000000
+       </td>
+       <td class="data row0 col2" id="T_95e99_row0_col2">
+        6
+       </td>
+       <td class="data row0 col3" id="T_95e99_row0_col3">
+        160.000000
+       </td>
+       <td class="data row0 col4" id="T_95e99_row0_col4">
+        110
+       </td>
+       <td class="data row0 col5" id="T_95e99_row0_col5">
+        3.900000
+       </td>
+       <td class="data row0 col6" id="T_95e99_row0_col6">
+        2.620000
+       </td>
+       <td class="data row0 col7" id="T_95e99_row0_col7">
+        16.460000
+       </td>
+       <td class="data row0 col8" id="T_95e99_row0_col8">
+        0
+       </td>
+       <td class="data row0 col9" id="T_95e99_row0_col9">
+        1
+       </td>
+       <td class="data row0 col10" id="T_95e99_row0_col10">
+        4
+       </td>
+       <td class="data row0 col11" id="T_95e99_row0_col11">
+        4
+       </td>
+      </tr>
+      <tr>
+       <th class="row_heading level0 row1" id="T_95e99_level0_row1">
+        1
+       </th>
+       <td class="data row1 col0" id="T_95e99_row1_col0">
+        Mazda RX4 Wag
+       </td>
+       <td class="data row1 col1" id="T_95e99_row1_col1">
+        21.000000
+       </td>
+       <td class="data row1 col2" id="T_95e99_row1_col2">
+        6
+       </td>
+       <td class="data row1 col3" id="T_95e99_row1_col3">
+        160.000000
+       </td>
+       <td class="data row1 col4" id="T_95e99_row1_col4">
+        110
+       </td>
+       <td class="data row1 col5" id="T_95e99_row1_col5">
+        3.900000
+       </td>
+       <td class="data row1 col6" id="T_95e99_row1_col6">
+        2.875000
+       </td>
+       <td class="data row1 col7" id="T_95e99_row1_col7">
+        17.020000
+       </td>
+       <td class="data row1 col8" id="T_95e99_row1_col8">
+        0
+       </td>
+       <td class="data row1 col9" id="T_95e99_row1_col9">
+        1
+       </td>
+       <td class="data row1 col10" id="T_95e99_row1_col10">
+        4
+       </td>
+       <td class="data row1 col11" id="T_95e99_row1_col11">
+        4
+       </td>
+      </tr>
+      <tr>
+       <th class="row_heading level0 row2" id="T_95e99_level0_row2">
+        2
+       </th>
+       <td class="data row2 col0" id="T_95e99_row2_col0">
+        Datsun 710
+       </td>
+       <td class="data row2 col1" id="T_95e99_row2_col1">
+        22.800000
+       </td>
+       <td class="data row2 col2" id="T_95e99_row2_col2">
+        4
+       </td>
+       <td class="data row2 col3" id="T_95e99_row2_col3">
+        108.000000
+       </td>
+       <td class="data row2 col4" id="T_95e99_row2_col4">
+        93
+       </td>
+       <td class="data row2 col5" id="T_95e99_row2_col5">
+        3.850000
+       </td>
+       <td class="data row2 col6" id="T_95e99_row2_col6">
+        2.320000
+       </td>
+       <td class="data row2 col7" id="T_95e99_row2_col7">
+        18.610000
+       </td>
+       <td class="data row2 col8" id="T_95e99_row2_col8">
+        1
+       </td>
+       <td class="data row2 col9" id="T_95e99_row2_col9">
+        1
+       </td>
+       <td class="data row2 col10" id="T_95e99_row2_col10">
+        4
+       </td>
+       <td class="data row2 col11" id="T_95e99_row2_col11">
+        1
+       </td>
+      </tr>
+      <tr>
+       <th class="row_heading level0 row3" id="T_95e99_level0_row3">
+        3
+       </th>
+       <td class="data row3 col0" id="T_95e99_row3_col0">
+        Hornet 4 Drive
+       </td>
+       <td class="data row3 col1" id="T_95e99_row3_col1">
+        21.400000
+       </td>
+       <td class="data row3 col2" id="T_95e99_row3_col2">
+        6
+       </td>
+       <td class="data row3 col3" id="T_95e99_row3_col3">
+        258.000000
+       </td>
+       <td class="data row3 col4" id="T_95e99_row3_col4">
+        110
+       </td>
+       <td class="data row3 col5" id="T_95e99_row3_col5">
+        3.080000
+       </td>
+       <td class="data row3 col6" id="T_95e99_row3_col6">
+        3.215000
+       </td>
+       <td class="data row3 col7" id="T_95e99_row3_col7">
+        19.440000
+       </td>
+       <td class="data row3 col8" id="T_95e99_row3_col8">
+        1
+       </td>
+       <td class="data row3 col9" id="T_95e99_row3_col9">
+        0
+       </td>
+       <td class="data row3 col10" id="T_95e99_row3_col10">
+        3
+       </td>
+       <td class="data row3 col11" id="T_95e99_row3_col11">
+        1
+       </td>
+      </tr>
+      <tr>
+       <th class="row_heading level0 row4" id="T_95e99_level0_row4">
+        4
+       </th>
+       <td class="data row4 col0" id="T_95e99_row4_col0">
+        Hornet Sportabout
+       </td>
+       <td class="data row4 col1" id="T_95e99_row4_col1">
+        18.700000
+       </td>
+       <td class="data row4 col2" id="T_95e99_row4_col2">
+        8
+       </td>
+       <td class="data row4 col3" id="T_95e99_row4_col3">
+        360.000000
+       </td>
+       <td class="data row4 col4" id="T_95e99_row4_col4">
+        175
+       </td>
+       <td class="data row4 col5" id="T_95e99_row4_col5">
+        3.150000
+       </td>
+       <td class="data row4 col6" id="T_95e99_row4_col6">
+        3.440000
+       </td>
+       <td class="data row4 col7" id="T_95e99_row4_col7">
+        17.020000
+       </td>
+       <td class="data row4 col8" id="T_95e99_row4_col8">
+        0
+       </td>
+       <td class="data row4 col9" id="T_95e99_row4_col9">
+        0
+       </td>
+       <td class="data row4 col10" id="T_95e99_row4_col10">
+        3
+       </td>
+       <td class="data row4 col11" id="T_95e99_row4_col11">
+        2
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <hr/>
+   <div id="show">
+   </div>
+  </article>
+  <footer>
+   <ul class="social">
+    <li>
+     <a href="https://twitter.com/pypeaday">
+      twitter
+     </a>
+    </li>
+    <li>
+     <a href="https://www.linkedin.com/in/nicpayne713/">
+      LinkedIn
+     </a>
+    </li>
+    <li>
+     <a href="https://github.com/nicpayne713">
+      GitHub
+     </a>
+    </li>
+    <li>
+     <a href="https://www.twitch.tv/pypeaday">
+      twitch
+     </a>
+    </li>
+   </ul>
+   <p>
+    © 2022 - 2022
+   </p>
+  </footer>
+ </body>
+</html>

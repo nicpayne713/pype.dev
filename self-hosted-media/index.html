@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width" name="viewport"/>
+  <link href="/bitmoji.ico" rel="icon" type="image/png"/>
+  <link href="https://pype.dev/self-hosted-media/amp/" rel="amphtml"/>
+  <meta content="$ilp.uphold.com/MGN2ni2YMXaQ" name="monetization" property="monetization"/>
+  <!-- <link rel='stylesheet' href='/fonts.css' />
+  <link rel='stylesheet' href='/archive-styles.css' />
+  <link rel='stylesheet' href='/article.css' /> -->
+  <link href="/main.css" rel="stylesheet"/>
+  <link as="style" href="/one-dark.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+  <link as="style" href="/furo-purge.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+  <!-- <link rel="preload" href="/scroll.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+  <noscript>
+   <!-- <link rel='stylesheet' href='/scroll.css' /> -->
+   <link href="/one-dark.min.css" rel="stylesheet"/>
+   <link href="/furo-purge.min.css" rel="stylesheet"/>
+  </noscript>
+  <link href="bitmoji_48x48.png" rel="apple-touch-icon" sizes="48x48"/>
+  <link href="bitmoji_72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+  <link href="bitmoji_96x96.png" rel="apple-touch-icon" sizes="96x96"/>
+  <link href="bitmoji_144x144.png" rel="apple-touch-icon" sizes="144x144"/>
+  <link href="bitmoji_192x192.png" rel="apple-touch-icon" sizes="192x192"/>
+  <link href="bitmoji_256x256.png" rel="apple-touch-icon" sizes="256x256"/>
+  <link href="bitmoji_384x384.png" rel="apple-touch-icon" sizes="384x384"/>
+  <link href="bitmoji_512x512.png" rel="apple-touch-icon" sizes="512x512"/>
+  <title>
+   self-hosted-media
+  </title>
+  <meta content="article" name="og:type" property="og:type"/>
+  <meta content="Nicholas Payne" name="og:author" property="og:author"/>
+  <meta content="Nicholas Payne" name="og:site_name" property="og:site_name"/>
+  <meta content="#3A5895" name="theme-color"/>
+  <meta content="Nicholas Payne" name="og:author" property="og:author"/>
+  <meta content="pypeaday@pm.me" name="og:author_email" property="og:author_email"/>
+  <meta content="website" name="og:type" property="og:type"/>
+  <meta content="Self-hosting 1 or several media servers is another common homelab use-case. you-get pip install you-get For example if I wanted to catch up on ancient Chinese m" name="description" property="description"/>
+  <meta content="Self-hosting 1 or several media servers is another common homelab use-case. you-get pip install you-get For example if I wanted to catch up on ancient Chinese m" name="og:description" property="og:description"/>
+  <meta content="Self-hosting 1 or several media servers is another common homelab use-case. you-get pip install you-get For example if I wanted to catch up on ancient Chinese m" name="twitter:description" property="twitter:description"/>
+  <meta content="self-hosted-media | Pypeaday" name="og:title" property="og:title"/>
+  <meta content="self-hosted-media | Pypeaday" name="twitter:title" property="twitter:title"/>
+  <meta content="/static/images/self-hosted-media-og.png" name="og:image" property="og:image"/>
+  <meta content="/static/images/self-hosted-media-og.png" name="twitter:image" property="twitter:image"/>
+  <meta content="1600" name="og:image:width" property="og:image:width"/>
+  <meta content="900" name="og:image:width" property="og:image:width"/>
+  <meta content="summary_large_image" name="twitter:card" property="twitter:card"/>
+  <meta content="Pypeaday" name="og:site_name" property="og:site_name"/>
+  <meta content="@pypeaday" name="twitter:creator" property="twitter:creator"/>
+  <meta content="self-hosted-media" name="title" property="title"/>
+  <meta content="markata 0.2.0" name="generator" property="generator"/>
+  <link href="https://pype.dev/self-hosted-media/" rel="canonical"/>
+  <meta content="https://pype.dev/self-hosted-media/" name="og:url" property="og:url"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="/static/images/self-hosted-media-og_250x140.png" name="og:sm_image" property="og:sm_image"/>
+  <meta content="/static/images/self-hosted-media-og_250x140.png" name="og:sm_image" property="og:sm_image"/>
+ </head>
+ <body>
+  <nav>
+   <ul>
+    <li>
+     <a href="/">
+      Home
+     </a>
+    </li>
+    <li>
+     <a href="/archive/">
+      Archive
+     </a>
+    </li>
+    <li>
+     <a aria-label="RSS" href="/rss.xml">
+      <svg class="icon" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+       <path d="M 4 4.44 v 2.83 c 7.03 0 12.73 5.7 12.73 12.73 h 2.83 c 0 -8.59 -6.97 -15.56 -15.56 -15.56 Z m 0 5.66 v 2.83 c 3.9 0 7.07 3.17 7.07 7.07 h 2.83 c 0 -5.47 -4.43 -9.9 -9.9 -9.9 Z M 6.18 15.64 A 2.18 2.18 0 0 1 6.18 20 A 2.18 2.18 0 0 1 6.18 15.64" fill="currentColor">
+       </path>
+      </svg>
+     </a>
+    </li>
+   </ul>
+  </nav>
+  <article class="blog-post h-entry">
+   <!-- <div id='cover-wrapper'>
+      <img src='/self-hosted-media.webp' alt='cover image for article' />
+    </div> -->
+   <div id="title-wrapper">
+    <a class="u-url" href="https://pype.dev/self-hosted-media/">
+     <h1 class="flair" id="title" style="text-align:right;z-index:2;padding-right:.2rem">
+      self-hosted-media
+     </h1>
+    </a>
+    <p>
+     <time class="dt-published post-date" datetime="2022-03-24" style="text-align:right;z-index:2">
+      2022-03-24
+     </time>
+    </p>
+    <div class="h-card p-author" rel="author">
+     <div class="content">
+      <a class="p-name u-url" href="https://pype.dev/">
+       <p>
+        <span class="p-given-name">
+         Nicholas
+        </span>
+        <span class="p-family-name">
+         Payne
+        </span>
+       </p>
+      </a>
+      <p class="p-note">
+       Goofing off
+       <a href="https://twitter.com/pypeaday">
+        @pypeaday
+       </a>
+      </p>
+     </div>
+    </div>
+    <!-- edit -->
+    <p>
+     <a alt="edit post url" href="https://github.com/nicpayne713/mental-data-lake/edit/main/pages/blog/self-hosted-media.md" title="edit this post">
+      edit
+      <span aria-label="" role="img">
+       ✏️
+      </span>
+     </a>
+    </p>
+   </div>
+   <!-- <h2 class='toc'>toc</h2> -->
+   <!-- <div class="toc">
+<ul>
+<li><a href="#abcmeta">ABCMeta</a></li>
+</ul>
+</div>
+ -->
+   <div id="post-body">
+    <p>
+     Self-hosting 1 or several media servers is another common homelab use-case.
+Getting content for your media servers is up to you, but I'll show a few ways here to get content somewhat easily!
+    </p>
+    <p>
+     <strong>
+      YouTube Disclaimer at Bottom
+     </strong>
+    </p>
+    <h2 id="you-get">
+     you-get
+     <a alt="id" class="heading-permalink" href="#you-get" title="link to #you-get">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h2>
+    <p>
+     <code>
+      you-get
+     </code>
+     is a nice cli for grabbing media content off the web.
+    </p>
+    <h3 id="installation">
+     Installation
+     <a alt="id" class="heading-permalink" href="#installation" title="link to #installation">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h3>
+    <p>
+     <code>
+      pip install you-get
+     </code>
+     or use ad-hoc with
+     <code>
+      pipx run you-get &lt;url&gt;
+     </code>
+    </p>
+    <h3 id="usage">
+     Usage
+     <a alt="id" class="heading-permalink" href="#usage" title="link to #usage">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h3>
+    <p>
+     For example if I wanted to catch up on ancient Chinese military tactics I may go for
+     <code>
+      The Art of War
+     </code>
+     off the Internet Archive...
+    </p>
+    <div class="highlight">
+     <pre><span></span><code>sandbox  🌱 main 🗑️  ×3🛤️  ×6via 🐍 v3.8.11 <span class="o">(</span>sandbox<span class="o">)</span>  took 15s
+❯ you-get https://archive.org/details/art_of_war_librivox -i
+Site:       Archive.org
+Title:      The Art of War : Sun Tzu : Free Download, Borrow, and Streaming : Internet Archive
+Type:       MP3 <span class="o">(</span>audio/mpeg<span class="o">)</span>
+Size:       <span class="m">3</span>.87 MiB <span class="o">(</span><span class="m">4055167</span> Bytes<span class="o">)</span>
+</code></pre>
+    </div>
+    <p>
+     the
+     <code>
+      -i
+     </code>
+     is showing me the info of what would be downloaded without the flag (it's like a dry run)
+    </p>
+    <div class="highlight">
+     <pre><span></span><code>sandbox  🌱 main 🗑️  ×3🛤️  ×6via 🐍 v3.8.11 <span class="o">(</span>sandbox<span class="o">)</span>
+❯ you-get https://archive.org/details/art_of_war_librivox
+Site:       Archive.org
+Title:      The Art of War : Sun Tzu : Free Download, Borrow, and Streaming : Internet Archive
+Type:       MP3 <span class="o">(</span>audio/mpeg<span class="o">)</span>
+Size:       <span class="m">3</span>.87 MiB <span class="o">(</span><span class="m">4055167</span> Bytes<span class="o">)</span>
+
+Downloading The Art of War : Sun Tzu : Free Download, Borrow, and Streaming : Internet Archi.mp3 ...
+ <span class="m">100</span>% <span class="o">(</span>  <span class="m">3</span>.9/  <span class="m">3</span>.9MB<span class="o">)</span> ├████████████████████████████████████████████████████████████┤<span class="o">[</span><span class="m">1</span>/1<span class="o">]</span>  <span class="m">917</span> kB/s
+</code></pre>
+    </div>
+    <p>
+     Now I can toss that mp3 onto my
+     <code>
+      booksonic
+     </code>
+     server and study for world domination while I do the dishes!
+    </p>
+    <h2 id="pytube">
+     pytube
+     <a alt="id" class="heading-permalink" href="#pytube" title="link to #pytube">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h2>
+    <p>
+     <code>
+      pytube
+     </code>
+     is a python implementation of a
+     <a href="##YouTube">
+      youtube downloader
+     </a>
+     that works at the command line or in python!
+    </p>
+    <h3 id="installation_1">
+     Installation
+     <a alt="id" class="heading-permalink" href="#installation_1" title="link to #installation_1">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h3>
+    <p>
+     <a href="https://pytube.io/en/latest/">
+      docs
+     </a>
+    </p>
+    <p>
+     <code>
+      pip install pytube
+     </code>
+    </p>
+    <h3 id="usage_1">
+     Usage
+     <a alt="id" class="heading-permalink" href="#usage_1" title="link to #usage_1">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h3>
+    <p>
+     <code>
+      pytube
+     </code>
+     has a lot of functionality, but a quick one would be the
+     <code>
+      --list
+     </code>
+     so you can see what qualities are available
+    </p>
+    <div class="highlight">
+     <pre><span></span><code>sandbox   main ️  ×3️  ×7via  v3.8.11 <span class="o">(</span>sandbox<span class="o">)</span>  took 2m49s
+❯ pytube https://www.youtube.com/watch<span class="se">\?</span>v<span class="se">\=</span>LDU_Txk06tM  --list
+Loading video...
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"17"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"video/3gpp"</span> <span class="nv">res</span><span class="o">=</span><span class="s2">"144p"</span> <span class="nv">fps</span><span class="o">=</span><span class="s2">"8fps"</span> <span class="nv">vcodec</span><span class="o">=</span><span class="s2">"mp4v.20.3"</span> <span class="nv">acodec</span><span class="o">=</span><span class="s2">"mp4a.40.2"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"True"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"video"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"18"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="nv">res</span><span class="o">=</span><span class="s2">"360p"</span> <span class="nv">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="nv">vcodec</span><span class="o">=</span><span class="s2">"avc1.42001E"</span> <span class="nv">acodec</span><span class="o">=</span><span class="s2">"mp4a.40.2"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"True"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"video"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"22"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="nv">res</span><span class="o">=</span><span class="s2">"720p"</span> <span class="nv">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="nv">vcodec</span><span class="o">=</span><span class="s2">"avc1.64001F"</span> <span class="nv">acodec</span><span class="o">=</span><span class="s2">"mp4a.40.2"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"True"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"video"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"313"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"video/webm"</span> <span class="nv">res</span><span class="o">=</span><span class="s2">"2160p"</span> <span class="nv">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="nv">vcodec</span><span class="o">=</span><span class="s2">"vp9"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"video"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"401"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="nv">res</span><span class="o">=</span><span class="s2">"2160p"</span> <span class="nv">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="nv">vcodec</span><span class="o">=</span><span class="s2">"av01.0.12M.08"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"video"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"271"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"video/webm"</span> <span class="nv">res</span><span class="o">=</span><span class="s2">"1440p"</span> <span class="nv">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="nv">vcodec</span><span class="o">=</span><span class="s2">"vp9"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"video"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"400"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="nv">res</span><span class="o">=</span><span class="s2">"1440p"</span> <span class="nv">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="nv">vcodec</span><span class="o">=</span><span class="s2">"av01.0.12M.08"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"video"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"137"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="nv">res</span><span class="o">=</span><span class="s2">"1080p"</span> <span class="nv">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="nv">vcodec</span><span class="o">=</span><span class="s2">"avc1.640028"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"video"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"248"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"video/webm"</span> <span class="nv">res</span><span class="o">=</span><span class="s2">"1080p"</span> <span class="nv">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="nv">vcodec</span><span class="o">=</span><span class="s2">"vp9"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"video"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"399"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="nv">res</span><span class="o">=</span><span class="s2">"1080p"</span> <span class="nv">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="nv">vcodec</span><span class="o">=</span><span class="s2">"av01.0.08M.08"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"video"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"136"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="nv">res</span><span class="o">=</span><span class="s2">"720p"</span> <span class="nv">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="nv">vcodec</span><span class="o">=</span><span class="s2">"avc1.4d401f"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"video"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"247"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"video/webm"</span> <span class="nv">res</span><span class="o">=</span><span class="s2">"720p"</span> <span class="nv">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="nv">vcodec</span><span class="o">=</span><span class="s2">"vp9"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"video"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"398"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="nv">res</span><span class="o">=</span><span class="s2">"720p"</span> <span class="nv">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="nv">vcodec</span><span class="o">=</span><span class="s2">"av01.0.05M.08"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"video"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"135"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="nv">res</span><span class="o">=</span><span class="s2">"480p"</span> <span class="nv">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="nv">vcodec</span><span class="o">=</span><span class="s2">"avc1.4d401f"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"video"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"244"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"video/webm"</span> <span class="nv">res</span><span class="o">=</span><span class="s2">"480p"</span> <span class="nv">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="nv">vcodec</span><span class="o">=</span><span class="s2">"vp9"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"video"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"397"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="nv">res</span><span class="o">=</span><span class="s2">"480p"</span> <span class="nv">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="nv">vcodec</span><span class="o">=</span><span class="s2">"av01.0.04M.08"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"video"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"134"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="nv">res</span><span class="o">=</span><span class="s2">"360p"</span> <span class="nv">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="nv">vcodec</span><span class="o">=</span><span class="s2">"avc1.4d401e"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"video"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"243"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"video/webm"</span> <span class="nv">res</span><span class="o">=</span><span class="s2">"360p"</span> <span class="nv">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="nv">vcodec</span><span class="o">=</span><span class="s2">"vp9"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"video"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"396"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="nv">res</span><span class="o">=</span><span class="s2">"360p"</span> <span class="nv">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="nv">vcodec</span><span class="o">=</span><span class="s2">"av01.0.01M.08"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"video"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"133"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="nv">res</span><span class="o">=</span><span class="s2">"240p"</span> <span class="nv">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="nv">vcodec</span><span class="o">=</span><span class="s2">"avc1.4d4015"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"video"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"242"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"video/webm"</span> <span class="nv">res</span><span class="o">=</span><span class="s2">"240p"</span> <span class="nv">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="nv">vcodec</span><span class="o">=</span><span class="s2">"vp9"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"video"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"395"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="nv">res</span><span class="o">=</span><span class="s2">"240p"</span> <span class="nv">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="nv">vcodec</span><span class="o">=</span><span class="s2">"av01.0.00M.08"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"video"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"160"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="nv">res</span><span class="o">=</span><span class="s2">"144p"</span> <span class="nv">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="nv">vcodec</span><span class="o">=</span><span class="s2">"avc1.4d400c"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"video"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"278"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"video/webm"</span> <span class="nv">res</span><span class="o">=</span><span class="s2">"144p"</span> <span class="nv">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="nv">vcodec</span><span class="o">=</span><span class="s2">"vp9"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"video"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"394"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="nv">res</span><span class="o">=</span><span class="s2">"144p"</span> <span class="nv">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="nv">vcodec</span><span class="o">=</span><span class="s2">"av01.0.00M.08"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"video"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"139"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"audio/mp4"</span> <span class="nv">abr</span><span class="o">=</span><span class="s2">"48kbps"</span> <span class="nv">acodec</span><span class="o">=</span><span class="s2">"mp4a.40.5"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"audio"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"140"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"audio/mp4"</span> <span class="nv">abr</span><span class="o">=</span><span class="s2">"128kbps"</span> <span class="nv">acodec</span><span class="o">=</span><span class="s2">"mp4a.40.2"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"audio"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"249"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"audio/webm"</span> <span class="nv">abr</span><span class="o">=</span><span class="s2">"50kbps"</span> <span class="nv">acodec</span><span class="o">=</span><span class="s2">"opus"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"audio"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"250"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"audio/webm"</span> <span class="nv">abr</span><span class="o">=</span><span class="s2">"70kbps"</span> <span class="nv">acodec</span><span class="o">=</span><span class="s2">"opus"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"audio"</span>&gt;
+&lt;Stream: <span class="nv">itag</span><span class="o">=</span><span class="s2">"251"</span> <span class="nv">mime_type</span><span class="o">=</span><span class="s2">"audio/webm"</span> <span class="nv">abr</span><span class="o">=</span><span class="s2">"160kbps"</span> <span class="nv">acodec</span><span class="o">=</span><span class="s2">"opus"</span> <span class="nv">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nv">type</span><span class="o">=</span><span class="s2">"audio"</span>&gt;
+</code></pre>
+    </div>
+    <p>
+     <code>
+      pytube &lt;url&gt; --itag &lt;&gt;
+     </code>
+     will download the specific
+     <code>
+      itag
+     </code>
+     from the list.
+    </p>
+    <p>
+     Notice that some
+     <code>
+      itags
+     </code>
+     are videos and others audio - so you can download just the music of a YT video.
+    </p>
+    <p>
+     <code>
+      pytube
+     </code>
+     also works in python...
+    </p>
+    <div class="highlight">
+     <pre><span></span><code><span class="n">sandbox</span> <span class="err">↪</span> <span class="n">main</span> <span class="n">v3</span><span class="mf">.8.11</span> <span class="n">ipython</span>
+<span class="err">❯</span> <span class="kn">from</span> <span class="nn">pytube</span> <span class="kn">import</span> <span class="n">YouTube</span>
+
+<span class="n">sandbox</span> <span class="err">↪</span> <span class="n">main</span> <span class="n">v3</span><span class="mf">.8.11</span> <span class="n">ipython</span>
+<span class="err">❯</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">YouTube</span><span class="p">(</span><span class="s2">"https://www.youtube.com/watch?v=LDU_Txk06tM"</span><span class="p">)</span><span class="o">.</span><span class="n">streams</span><span class="p">]</span>
+
+<span class="p">[</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"17"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"video/3gpp"</span> <span class="n">res</span><span class="o">=</span><span class="s2">"144p"</span> <span class="n">fps</span><span class="o">=</span><span class="s2">"8fps"</span> <span class="n">vcodec</span><span class="o">=</span><span class="s2">"mp4v.20.3"</span> <span class="n">acodec</span><span class="o">=</span><span class="s2">"mp4a.40.2"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"True"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"video"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"18"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="n">res</span><span class="o">=</span><span class="s2">"360p"</span> <span class="n">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="n">vcodec</span><span class="o">=</span><span class="s2">"avc1.42001E"</span> <span class="n">acodec</span><span class="o">=</span><span class="s2">"mp4a.40.2"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"True"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"video"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"22"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="n">res</span><span class="o">=</span><span class="s2">"720p"</span> <span class="n">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="n">vcodec</span><span class="o">=</span><span class="s2">"avc1.64001F"</span> <span class="n">acodec</span><span class="o">=</span><span class="s2">"mp4a.40.2"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"True"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"video"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"313"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"video/webm"</span> <span class="n">res</span><span class="o">=</span><span class="s2">"2160p"</span> <span class="n">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="n">vcodec</span><span class="o">=</span><span class="s2">"vp9"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"video"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"401"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="n">res</span><span class="o">=</span><span class="s2">"2160p"</span> <span class="n">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="n">vcodec</span><span class="o">=</span><span class="s2">"av01.0.12M.08"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"video"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"271"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"video/webm"</span> <span class="n">res</span><span class="o">=</span><span class="s2">"1440p"</span> <span class="n">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="n">vcodec</span><span class="o">=</span><span class="s2">"vp9"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"video"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"400"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="n">res</span><span class="o">=</span><span class="s2">"1440p"</span> <span class="n">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="n">vcodec</span><span class="o">=</span><span class="s2">"av01.0.12M.08"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"video"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"137"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="n">res</span><span class="o">=</span><span class="s2">"1080p"</span> <span class="n">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="n">vcodec</span><span class="o">=</span><span class="s2">"avc1.640028"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"video"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"248"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"video/webm"</span> <span class="n">res</span><span class="o">=</span><span class="s2">"1080p"</span> <span class="n">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="n">vcodec</span><span class="o">=</span><span class="s2">"vp9"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"video"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"399"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="n">res</span><span class="o">=</span><span class="s2">"1080p"</span> <span class="n">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="n">vcodec</span><span class="o">=</span><span class="s2">"av01.0.08M.08"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"video"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"136"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="n">res</span><span class="o">=</span><span class="s2">"720p"</span> <span class="n">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="n">vcodec</span><span class="o">=</span><span class="s2">"avc1.4d401f"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"video"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"247"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"video/webm"</span> <span class="n">res</span><span class="o">=</span><span class="s2">"720p"</span> <span class="n">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="n">vcodec</span><span class="o">=</span><span class="s2">"vp9"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"video"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"398"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="n">res</span><span class="o">=</span><span class="s2">"720p"</span> <span class="n">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="n">vcodec</span><span class="o">=</span><span class="s2">"av01.0.05M.08"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"video"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"135"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="n">res</span><span class="o">=</span><span class="s2">"480p"</span> <span class="n">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="n">vcodec</span><span class="o">=</span><span class="s2">"avc1.4d401f"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"video"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"244"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"video/webm"</span> <span class="n">res</span><span class="o">=</span><span class="s2">"480p"</span> <span class="n">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="n">vcodec</span><span class="o">=</span><span class="s2">"vp9"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"video"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"397"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="n">res</span><span class="o">=</span><span class="s2">"480p"</span> <span class="n">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="n">vcodec</span><span class="o">=</span><span class="s2">"av01.0.04M.08"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"video"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"134"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="n">res</span><span class="o">=</span><span class="s2">"360p"</span> <span class="n">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="n">vcodec</span><span class="o">=</span><span class="s2">"avc1.4d401e"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"video"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"243"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"video/webm"</span> <span class="n">res</span><span class="o">=</span><span class="s2">"360p"</span> <span class="n">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="n">vcodec</span><span class="o">=</span><span class="s2">"vp9"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"video"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"396"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="n">res</span><span class="o">=</span><span class="s2">"360p"</span> <span class="n">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="n">vcodec</span><span class="o">=</span><span class="s2">"av01.0.01M.08"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"video"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"133"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="n">res</span><span class="o">=</span><span class="s2">"240p"</span> <span class="n">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="n">vcodec</span><span class="o">=</span><span class="s2">"avc1.4d4015"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"video"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"242"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"video/webm"</span> <span class="n">res</span><span class="o">=</span><span class="s2">"240p"</span> <span class="n">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="n">vcodec</span><span class="o">=</span><span class="s2">"vp9"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"video"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"395"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="n">res</span><span class="o">=</span><span class="s2">"240p"</span> <span class="n">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="n">vcodec</span><span class="o">=</span><span class="s2">"av01.0.00M.08"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"video"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"160"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="n">res</span><span class="o">=</span><span class="s2">"144p"</span> <span class="n">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="n">vcodec</span><span class="o">=</span><span class="s2">"avc1.4d400c"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"video"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"278"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"video/webm"</span> <span class="n">res</span><span class="o">=</span><span class="s2">"144p"</span> <span class="n">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="n">vcodec</span><span class="o">=</span><span class="s2">"vp9"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"video"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"394"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"video/mp4"</span> <span class="n">res</span><span class="o">=</span><span class="s2">"144p"</span> <span class="n">fps</span><span class="o">=</span><span class="s2">"30fps"</span> <span class="n">vcodec</span><span class="o">=</span><span class="s2">"av01.0.00M.08"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"video"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"139"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"audio/mp4"</span> <span class="n">abr</span><span class="o">=</span><span class="s2">"48kbps"</span> <span class="n">acodec</span><span class="o">=</span><span class="s2">"mp4a.40.5"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"audio"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"140"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"audio/mp4"</span> <span class="n">abr</span><span class="o">=</span><span class="s2">"128kbps"</span> <span class="n">acodec</span><span class="o">=</span><span class="s2">"mp4a.40.2"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"audio"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"249"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"audio/webm"</span> <span class="n">abr</span><span class="o">=</span><span class="s2">"50kbps"</span> <span class="n">acodec</span><span class="o">=</span><span class="s2">"opus"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"audio"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"250"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"audio/webm"</span> <span class="n">abr</span><span class="o">=</span><span class="s2">"70kbps"</span> <span class="n">acodec</span><span class="o">=</span><span class="s2">"opus"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"audio"</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">Stream</span><span class="p">:</span> <span class="n">itag</span><span class="o">=</span><span class="s2">"251"</span> <span class="n">mime_type</span><span class="o">=</span><span class="s2">"audio/webm"</span> <span class="n">abr</span><span class="o">=</span><span class="s2">"160kbps"</span> <span class="n">acodec</span><span class="o">=</span><span class="s2">"opus"</span> <span class="n">progressive</span><span class="o">=</span><span class="s2">"False"</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"audio"</span><span class="o">&gt;</span>
+<span class="p">]</span>
+</code></pre>
+    </div>
+    <h2 id="youtube-frontends">
+     YouTube Frontends
+     <a alt="id" class="heading-permalink" href="#youtube-frontends" title="link to #youtube-frontends">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h2>
+    <p>
+     There's 2 really good options for self-hosting a YT front-end...
+    </p>
+    <p>
+     <a href="https://github.com/bbilly1/tubearchivist">
+      Tube Archivist
+     </a>
+    </p>
+    <p>
+     <a href="https://github.com/Tzahi12345/YoutubeDL-Material">
+      YouTubeDL-Material
+     </a>
+    </p>
+    <p>
+     They have their pros and cons.
+You can also build yourself with the above utilities and use Plex or Jellyfin to serve up videos...
+    </p>
+    <p>
+     <strong>
+      Your self-hosting journey is up to you!
+     </strong>
+    </p>
+    <h2 id="youtube">
+     YouTube
+     <a alt="id" class="heading-permalink" href="#youtube" title="link to #youtube">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h2>
+    <p>
+     Downloading YouTube videos is a bit of a sore topic... Mainly you don't to hurt creators who rely on YT ad revenue for their livlihood.
+    </p>
+    <p>
+     Then again, maybe you're a vigilante who knows that YT also monetizes videos for their
+     <em>
+      own
+     </em>
+     gain and that the creators don't see that money either!
+    </p>
+    <p>
+     The solution is pretty easy and is 2-fold...
+    </p>
+    <ol>
+     <li>
+      Download YT videos
+     </li>
+     <li>
+      Personally support the content creators you follow via paypall, patreon, or whatever else they might have set-up.... even a buck or two a month is more than they'd get from your ad revenue explicitly plus it all goes to them!
+     </li>
+    </ol>
+   </div>
+   <hr/>
+   <div id="show">
+   </div>
+  </article>
+  <footer>
+   <ul class="social">
+    <li>
+     <a href="https://twitter.com/pypeaday">
+      twitter
+     </a>
+    </li>
+    <li>
+     <a href="https://www.linkedin.com/in/nicpayne713/">
+      LinkedIn
+     </a>
+    </li>
+    <li>
+     <a href="https://github.com/nicpayne713">
+      GitHub
+     </a>
+    </li>
+    <li>
+     <a href="https://www.twitch.tv/pypeaday">
+      twitch
+     </a>
+    </li>
+   </ul>
+   <p>
+    © 2022 - 2022
+   </p>
+  </footer>
+ </body>
+</html>

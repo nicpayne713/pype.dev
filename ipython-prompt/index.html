@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width" name="viewport"/>
+  <link href="/bitmoji.ico" rel="icon" type="image/png"/>
+  <link href="https://pype.dev/ipython-prompt/amp/" rel="amphtml"/>
+  <meta content="$ilp.uphold.com/MGN2ni2YMXaQ" name="monetization" property="monetization"/>
+  <!-- <link rel='stylesheet' href='/fonts.css' />
+  <link rel='stylesheet' href='/archive-styles.css' />
+  <link rel='stylesheet' href='/article.css' /> -->
+  <link href="/main.css" rel="stylesheet"/>
+  <link as="style" href="/one-dark.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+  <link as="style" href="/furo-purge.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+  <!-- <link rel="preload" href="/scroll.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+  <noscript>
+   <!-- <link rel='stylesheet' href='/scroll.css' /> -->
+   <link href="/one-dark.min.css" rel="stylesheet"/>
+   <link href="/furo-purge.min.css" rel="stylesheet"/>
+  </noscript>
+  <link href="bitmoji_48x48.png" rel="apple-touch-icon" sizes="48x48"/>
+  <link href="bitmoji_72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+  <link href="bitmoji_96x96.png" rel="apple-touch-icon" sizes="96x96"/>
+  <link href="bitmoji_144x144.png" rel="apple-touch-icon" sizes="144x144"/>
+  <link href="bitmoji_192x192.png" rel="apple-touch-icon" sizes="192x192"/>
+  <link href="bitmoji_256x256.png" rel="apple-touch-icon" sizes="256x256"/>
+  <link href="bitmoji_384x384.png" rel="apple-touch-icon" sizes="384x384"/>
+  <link href="bitmoji_512x512.png" rel="apple-touch-icon" sizes="512x512"/>
+  <title>
+   Ipython-Prompt
+  </title>
+  <meta content="article" name="og:type" property="og:type"/>
+  <meta content="Nicholas Payne" name="og:author" property="og:author"/>
+  <meta content="Nicholas Payne" name="og:site_name" property="og:site_name"/>
+  <meta content="#3A5895" name="theme-color"/>
+  <meta content="Nicholas Payne" name="og:author" property="og:author"/>
+  <meta content="pypeaday@pm.me" name="og:author_email" property="og:author_email"/>
+  <meta content="website" name="og:type" property="og:type"/>
+  <meta content="I have a  Now... I spend quite a bit of time in ipython every day and I got kind of sick of the vanilla experience and wanted something that more closely matche" name="description" property="description"/>
+  <meta content="I have a  Now... I spend quite a bit of time in ipython every day and I got kind of sick of the vanilla experience and wanted something that more closely matche" name="og:description" property="og:description"/>
+  <meta content="I have a  Now... I spend quite a bit of time in ipython every day and I got kind of sick of the vanilla experience and wanted something that more closely matche" name="twitter:description" property="twitter:description"/>
+  <meta content="Ipython-Prompt | Pypeaday" name="og:title" property="og:title"/>
+  <meta content="Ipython-Prompt | Pypeaday" name="twitter:title" property="twitter:title"/>
+  <meta content="/static/images/ipython-prompt-og.png" name="og:image" property="og:image"/>
+  <meta content="/static/images/ipython-prompt-og.png" name="twitter:image" property="twitter:image"/>
+  <meta content="1600" name="og:image:width" property="og:image:width"/>
+  <meta content="900" name="og:image:width" property="og:image:width"/>
+  <meta content="summary_large_image" name="twitter:card" property="twitter:card"/>
+  <meta content="Pypeaday" name="og:site_name" property="og:site_name"/>
+  <meta content="@pypeaday" name="twitter:creator" property="twitter:creator"/>
+  <meta content="Ipython-Prompt" name="title" property="title"/>
+  <meta content="markata 0.2.0" name="generator" property="generator"/>
+  <link href="https://pype.dev/ipython-prompt/" rel="canonical"/>
+  <meta content="https://pype.dev/ipython-prompt/" name="og:url" property="og:url"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="/static/images/ipython-prompt-og_250x140.png" name="og:sm_image" property="og:sm_image"/>
+  <meta content="/static/images/ipython-prompt-og_250x140.png" name="og:sm_image" property="og:sm_image"/>
+ </head>
+ <body>
+  <nav>
+   <ul>
+    <li>
+     <a href="/">
+      Home
+     </a>
+    </li>
+    <li>
+     <a href="/archive/">
+      Archive
+     </a>
+    </li>
+    <li>
+     <a aria-label="RSS" href="/rss.xml">
+      <svg class="icon" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+       <path d="M 4 4.44 v 2.83 c 7.03 0 12.73 5.7 12.73 12.73 h 2.83 c 0 -8.59 -6.97 -15.56 -15.56 -15.56 Z m 0 5.66 v 2.83 c 3.9 0 7.07 3.17 7.07 7.07 h 2.83 c 0 -5.47 -4.43 -9.9 -9.9 -9.9 Z M 6.18 15.64 A 2.18 2.18 0 0 1 6.18 20 A 2.18 2.18 0 0 1 6.18 15.64" fill="currentColor">
+       </path>
+      </svg>
+     </a>
+    </li>
+   </ul>
+  </nav>
+  <article class="blog-post h-entry">
+   <!-- <div id='cover-wrapper'>
+      <img src='/ipython-prompt.webp' alt='cover image for article' />
+    </div> -->
+   <div id="title-wrapper">
+    <a class="u-url" href="https://pype.dev/ipython-prompt/">
+     <h1 class="flair" id="title" style="text-align:right;z-index:2;padding-right:.2rem">
+      Ipython-Prompt
+     </h1>
+    </a>
+    <p>
+     <time class="dt-published post-date" datetime="2022-04-02" style="text-align:right;z-index:2">
+      2022-04-02
+     </time>
+    </p>
+    <div class="h-card p-author" rel="author">
+     <div class="content">
+      <a class="p-name u-url" href="https://pype.dev/">
+       <p>
+        <span class="p-given-name">
+         Nicholas
+        </span>
+        <span class="p-family-name">
+         Payne
+        </span>
+       </p>
+      </a>
+      <p class="p-note">
+       Goofing off
+       <a href="https://twitter.com/pypeaday">
+        @pypeaday
+       </a>
+      </p>
+     </div>
+    </div>
+    <!-- edit -->
+    <p>
+     <a alt="edit post url" href="https://github.com/nicpayne713/mental-data-lake/edit/main/pages/blog/ipython-prompt.md" title="edit this post">
+      edit
+      <span aria-label="" role="img">
+       ✏️
+      </span>
+     </a>
+    </p>
+   </div>
+   <!-- <h2 class='toc'>toc</h2> -->
+   <!-- <div class="toc">
+<ul>
+<li><a href="#abcmeta">ABCMeta</a></li>
+</ul>
+</div>
+ -->
+   <div id="post-body">
+    <p>
+     I have a
+     <a href="/starship">
+      post on starship
+     </a>
+     where I have some notes on how I use starship to make my zsh experience great with a sweet terminal prompt.
+    </p>
+    <p>
+     Now... I spend quite a bit of time in ipython every day and I got kind of sick of the vanilla experience and wanted something that more closely matched my starship prompt.
+    </p>
+    <p>
+     There's more to customizing ipython I know for sure but here's 2 things I have going for me...
+    </p>
+    <ol>
+     <li>
+      <p>
+       I use
+       <a href="https://pypi.org/project/rich/">
+        <code>
+         rich
+        </code>
+       </a>
+       authored by @
+       <a href="https://twitter.com/willmcgugan">
+        Will McGugan
+       </a>
+       which makes much of my ipython experience great.
+I won't write about that here but you can find my
+       <code>
+        rich
+       </code>
+       config
+       <a href="https://github.com/nicpayne713/dotfiles/blob/main/ipython/.ipython/profile_default/startup/01-rich_init.py">
+        here
+       </a>
+      </p>
+     </li>
+     <li>
+      <p>
+       I used
+       <code>
+        pygments
+       </code>
+       to customize the ipython prompt with my
+       <code>
+        ipython_config.py
+       </code>
+       and a startup script, next to my
+       <code>
+        rich
+       </code>
+       one, called
+       <code>
+        99-prompt.py
+       </code>
+       .
+      </p>
+     </li>
+    </ol>
+    <blockquote>
+     <p>
+      The scripts inside
+      <code>
+       ~/.ipython/&lt;profile&gt;/startup
+      </code>
+      are executed in lexigraphical order, so it's nice to name things in the 10's to give room for adding scripts in between others down the line.
+     </p>
+    </blockquote>
+    <h2 id="my-prompt">
+     My prompt
+     <a alt="id" class="heading-permalink" href="#my-prompt" title="link to #my-prompt">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h2>
+    <p>
+     My zsh prompt looks a little something like this:
+    </p>
+    <p>
+     <img alt="Alt Text" src="/images/zsh-starship-prompt.png"/>
+    </p>
+    <p>
+     And after my ipython customiztion it currently (subject to much change but this is as of my dotfiles commit #d22088f6be81a58b5f7dfb73b7a4088cbdd9fece on
+     <code>
+      main
+     </code>
+     ).
+    </p>
+    <p>
+     <img alt="Alt Text" src="/images/ipython-prompt.png"/>
+    </p>
+    <p>
+     Now in ipython I have an indicator of my working directory, git branch, python environment, and a note that I'm in
+     <code>
+      ipython
+     </code>
+     and not
+     <code>
+      zsh
+     </code>
+     .
+I also configured my prompt to warn me if I'm
+     <em>
+      not
+     </em>
+     in a git directory!
+    </p>
+    <p>
+     <img alt="Alt Text" src="/images/ipython-prompt-no-git.png"/>
+    </p>
+    <p>
+     All in all the customization isn't too bad with just 2 specific files.
+    </p>
+    <h2 id="ipython_configpy">
+     ipython_config.py
+     <a alt="id" class="heading-permalink" href="#ipython_configpy" title="link to #ipython_configpy">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h2>
+    <p>
+     There's several use cases for
+     <code>
+      ipython_config.py
+     </code>
+     files in several areas on a pc - sometimes you want a common config across users, so you'd drop one in
+     <code>
+      /etc/ipython
+     </code>
+     and othertimes you have your own which is probably at
+     <code>
+      ~/.ipython
+     </code>
+    </p>
+    <p>
+     My ipython config mostly has colors defined on
+     <code>
+      pygment tokens
+     </code>
+     plus a few autorun commands and
+     <code>
+      pyflyby
+     </code>
+     (see my friend Waylon's post on pyflyby
+     <a href="https://waylonwalker.com/pyflyby/">
+      here
+     </a>
+     )
+    </p>
+    <p>
+     I wanted to match my ipython somewhat to my tmux and vim color schemes, which I model after the vim-airline theme
+     <code>
+      night owl
+     </code>
+     .
+    </p>
+    <p>
+     After picking some some colors and saving variables it's a matter of setting colors per token and then referencing those tokens in your version of
+     <code>
+      99-prompt.py
+     </code>
+     .
+    </p>
+    <p>
+     You can check out my
+     <code>
+      ipython_config.py
+     </code>
+     <a href="https://github.com/nicpayne713/dotfiles/blob/home/ipython/.ipython/profile_default/ipython_config.py">
+      here
+     </a>
+    </p>
+    <p>
+     For example, I can set
+     <code>
+      Token.Name.Function
+     </code>
+     to black, and in
+     <code>
+      ipython
+     </code>
+     then a function's definition will appear in black text. I set mine to cyan to match my theme.
+    </p>
+    <p>
+     For the prompt colors just match the keyword in
+     <code>
+      c.TerminalInteractiveShell.highlighting_style_overrides
+     </code>
+     with what is referenced inside
+     <a href="https://github.com/nicpayne713/dotfiles/blob/home/ipython/.ipython/profile_default/startup/99-prompt.py">
+      99-prompt.py
+     </a>
+    </p>
+    <p>
+     For example,
+     <code>
+      Token.Prompt
+     </code>
+     is set to
+     <code>
+      bold grey
+     </code>
+     which gives me the bold chevron symbol you see in the above image that looks like my zsh prompt
+    </p>
+    <p>
+     Then in
+     <code>
+      99-prompt.py
+     </code>
+     I have this set for the prompt:
+    </p>
+    <div class="highlight">
+     <pre><span></span><code><span class="n">Token</span><span class="o">.</span><span class="n">Prompt</span> <span class="s2">"❯ "</span>
+</code></pre>
+    </div>
+    <h2 id="99-promptpy">
+     99-prompt.py
+     <a alt="id" class="heading-permalink" href="#99-promptpy" title="link to #99-promptpy">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h2>
+    <p>
+     You don't need to name your script
+     <code>
+      99-prompt.py
+     </code>
+     , but I wanted to know that it was for my prompt and I wanted it executed last so it made sense.
+    </p>
+    <p>
+     Here I have
+     <code>
+      MyPrompt
+     </code>
+     class with the prompt symbol defined as above and several other things...
+    </p>
+    <div class="highlight">
+     <pre><span></span><code><span class="k">class</span> <span class="nc">MyPrompt</span><span class="p">(</span><span class="n">Prompts</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">in_prompt_tokens</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cli</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span>
+            <span class="p">(</span><span class="n">Token</span><span class="p">,</span> <span class="s2">""</span><span class="p">),</span>
+            <span class="p">(</span><span class="n">Token</span><span class="o">.</span><span class="n">OutPrompt</span><span class="p">,</span> <span class="n">Path</span><span class="p">()</span><span class="o">.</span><span class="n">absolute</span><span class="p">()</span><span class="o">.</span><span class="n">stem</span><span class="p">),</span>
+            <span class="p">(</span><span class="n">Token</span><span class="p">,</span> <span class="s2">" "</span><span class="p">),</span>
+            <span class="p">(</span><span class="n">Token</span><span class="o">.</span><span class="n">Generic</span><span class="o">.</span><span class="n">Subheading</span><span class="p">,</span> <span class="n">get_branch</span><span class="p">()[</span><span class="mi">0</span><span class="p">]),</span>
+            <span class="p">(</span><span class="n">Token</span><span class="p">,</span> <span class="s2">" "</span><span class="p">),</span>
+            <span class="p">(</span><span class="n">Token</span><span class="o">.</span><span class="n">Generic</span><span class="o">.</span><span class="n">Heading</span><span class="p">,</span> <span class="n">get_branch</span><span class="p">()[</span><span class="mi">1</span><span class="p">]),</span>
+            <span class="p">(</span><span class="n">Token</span><span class="p">,</span> <span class="s2">" "</span><span class="p">),</span>
+            <span class="p">(</span><span class="n">Token</span><span class="o">.</span><span class="n">Name</span><span class="o">.</span><span class="n">Class</span><span class="p">,</span> <span class="s2">"via "</span> <span class="o">+</span> <span class="n">get_venv</span><span class="p">()),</span>
+            <span class="p">(</span><span class="n">Token</span><span class="p">,</span> <span class="s2">" "</span><span class="p">),</span>
+            <span class="p">(</span><span class="n">Token</span><span class="o">.</span><span class="n">Name</span><span class="o">.</span><span class="n">Entity</span><span class="p">,</span> <span class="s2">"ipython"</span><span class="p">),</span>
+            <span class="p">(</span><span class="n">Token</span><span class="p">,</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">),</span>
+            <span class="p">(</span>
+                <span class="n">Token</span><span class="o">.</span><span class="n">Prompt</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">shell</span><span class="o">.</span><span class="n">last_execution_succeeded</span>
+                <span class="k">else</span> <span class="n">Token</span><span class="o">.</span><span class="n">Generic</span><span class="o">.</span><span class="n">Error</span><span class="p">,</span>
+                <span class="s2">"❯ "</span><span class="p">,</span>
+            <span class="p">),</span>
+        <span class="p">]</span>
+</code></pre>
+    </div>
+    <p>
+     Notice I have 2 custom functions here,
+     <code>
+      get_branch
+     </code>
+     and
+     <code>
+      get_venv
+     </code>
+     which grab some git info and python env info and return strings I can dump into my prompt as shown above.
+    </p>
+    <p>
+     To finish you drop
+     <code>
+      ip = get_ipython()
+     </code>
+     and
+     <code>
+      ip.prompts = MyPrompt(ip)
+     </code>
+     at the bottom of your prompt script and you should be in custom prompt city!
+    </p>
+    <h2 id="end">
+     End
+     <a alt="id" class="heading-permalink" href="#end" title="link to #end">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h2>
+    <p>
+     This is more or less notes for myself on how this works - drop by my
+     <a href="https://github.com/nicpayne713/dotfiles/tree/home/ipython">
+      ipython config
+     </a>
+     in my dotfiles repo to see my full configs for ipython!
+    </p>
+   </div>
+   <hr/>
+   <div id="show">
+   </div>
+  </article>
+  <footer>
+   <ul class="social">
+    <li>
+     <a href="https://twitter.com/pypeaday">
+      twitter
+     </a>
+    </li>
+    <li>
+     <a href="https://www.linkedin.com/in/nicpayne713/">
+      LinkedIn
+     </a>
+    </li>
+    <li>
+     <a href="https://github.com/nicpayne713">
+      GitHub
+     </a>
+    </li>
+    <li>
+     <a href="https://www.twitch.tv/pypeaday">
+      twitch
+     </a>
+    </li>
+   </ul>
+   <p>
+    © 2022 - 2022
+   </p>
+  </footer>
+ </body>
+</html>

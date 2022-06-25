@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width" name="viewport"/>
+  <link href="/bitmoji.ico" rel="icon" type="image/png"/>
+  <link href="https://pype.dev/til/webservers-and-indexes/amp/" rel="amphtml"/>
+  <meta content="$ilp.uphold.com/MGN2ni2YMXaQ" name="monetization" property="monetization"/>
+  <!-- <link rel='stylesheet' href='/fonts.css' />
+  <link rel='stylesheet' href='/archive-styles.css' />
+  <link rel='stylesheet' href='/article.css' /> -->
+  <link href="/main.css" rel="stylesheet"/>
+  <link as="style" href="/one-dark.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+  <link as="style" href="/furo-purge.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+  <!-- <link rel="preload" href="/scroll.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+  <noscript>
+   <!-- <link rel='stylesheet' href='/scroll.css' /> -->
+   <link href="/one-dark.min.css" rel="stylesheet"/>
+   <link href="/furo-purge.min.css" rel="stylesheet"/>
+  </noscript>
+  <link href="bitmoji_48x48.png" rel="apple-touch-icon" sizes="48x48"/>
+  <link href="bitmoji_72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+  <link href="bitmoji_96x96.png" rel="apple-touch-icon" sizes="96x96"/>
+  <link href="bitmoji_144x144.png" rel="apple-touch-icon" sizes="144x144"/>
+  <link href="bitmoji_192x192.png" rel="apple-touch-icon" sizes="192x192"/>
+  <link href="bitmoji_256x256.png" rel="apple-touch-icon" sizes="256x256"/>
+  <link href="bitmoji_384x384.png" rel="apple-touch-icon" sizes="384x384"/>
+  <link href="bitmoji_512x512.png" rel="apple-touch-icon" sizes="512x512"/>
+  <title>
+   Webservers-And-Indexes
+  </title>
+  <meta content="article" name="og:type" property="og:type"/>
+  <meta content="Nicholas Payne" name="og:author" property="og:author"/>
+  <meta content="Nicholas Payne" name="og:site_name" property="og:site_name"/>
+  <meta content="#3A5895" name="theme-color"/>
+  <meta content="Nicholas Payne" name="og:author" property="og:author"/>
+  <meta content="pypeaday@pm.me" name="og:author_email" property="og:author_email"/>
+  <meta content="website" name="og:type" property="og:type"/>
+  <meta content="I host a lot of services in my homelab, but they A  Something that confused the heck out of me when I first started down the road of having a server was what a " name="description" property="description"/>
+  <meta content="I host a lot of services in my homelab, but they A  Something that confused the heck out of me when I first started down the road of having a server was what a " name="og:description" property="og:description"/>
+  <meta content="I host a lot of services in my homelab, but they A  Something that confused the heck out of me when I first started down the road of having a server was what a " name="twitter:description" property="twitter:description"/>
+  <meta content="Webservers-And-Indexes | Pypeaday" name="og:title" property="og:title"/>
+  <meta content="Webservers-And-Indexes | Pypeaday" name="twitter:title" property="twitter:title"/>
+  <meta content="/static/images/til/webservers-and-indexes-og.png" name="og:image" property="og:image"/>
+  <meta content="/static/images/til/webservers-and-indexes-og.png" name="twitter:image" property="twitter:image"/>
+  <meta content="1600" name="og:image:width" property="og:image:width"/>
+  <meta content="900" name="og:image:width" property="og:image:width"/>
+  <meta content="summary_large_image" name="twitter:card" property="twitter:card"/>
+  <meta content="Pypeaday" name="og:site_name" property="og:site_name"/>
+  <meta content="@pypeaday" name="twitter:creator" property="twitter:creator"/>
+  <meta content="Webservers-And-Indexes" name="title" property="title"/>
+  <meta content="markata 0.2.0" name="generator" property="generator"/>
+  <link href="https://pype.dev/til/webservers-and-indexes/" rel="canonical"/>
+  <meta content="https://pype.dev/til/webservers-and-indexes/" name="og:url" property="og:url"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="/static/images/til/webservers-and-indexes-og_250x140.png" name="og:sm_image" property="og:sm_image"/>
+  <meta content="/static/images/til/webservers-and-indexes-og_250x140.png" name="og:sm_image" property="og:sm_image"/>
+ </head>
+ <body>
+  <nav>
+   <ul>
+    <li>
+     <a href="/">
+      Home
+     </a>
+    </li>
+    <li>
+     <a href="/archive/">
+      Archive
+     </a>
+    </li>
+    <li>
+     <a aria-label="RSS" href="/rss.xml">
+      <svg class="icon" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+       <path d="M 4 4.44 v 2.83 c 7.03 0 12.73 5.7 12.73 12.73 h 2.83 c 0 -8.59 -6.97 -15.56 -15.56 -15.56 Z m 0 5.66 v 2.83 c 3.9 0 7.07 3.17 7.07 7.07 h 2.83 c 0 -5.47 -4.43 -9.9 -9.9 -9.9 Z M 6.18 15.64 A 2.18 2.18 0 0 1 6.18 20 A 2.18 2.18 0 0 1 6.18 15.64" fill="currentColor">
+       </path>
+      </svg>
+     </a>
+    </li>
+   </ul>
+  </nav>
+  <article class="blog-post h-entry">
+   <!-- <div id='cover-wrapper'>
+      <img src='/til/webservers-and-indexes.webp' alt='cover image for article' />
+    </div> -->
+   <div id="title-wrapper">
+    <a class="u-url" href="https://pype.dev/til/webservers-and-indexes/">
+     <h1 class="flair" id="title" style="text-align:right;z-index:2;padding-right:.2rem">
+      Webservers-And-Indexes
+     </h1>
+    </a>
+    <p>
+     <time class="dt-published post-date" datetime="2022-03-06" style="text-align:right;z-index:2">
+      2022-03-06
+     </time>
+    </p>
+    <div class="h-card p-author" rel="author">
+     <div class="content">
+      <a class="p-name u-url" href="https://pype.dev/">
+       <p>
+        <span class="p-given-name">
+         Nicholas
+        </span>
+        <span class="p-family-name">
+         Payne
+        </span>
+       </p>
+      </a>
+      <p class="p-note">
+       Goofing off
+       <a href="https://twitter.com/pypeaday">
+        @pypeaday
+       </a>
+      </p>
+     </div>
+    </div>
+    <!-- edit -->
+    <p>
+     <a alt="edit post url" href="https://github.com/nicpayne713/mental-data-lake/edit/main/pages/blog/til/webservers-and-indexes.md" title="edit this post">
+      edit
+      <span aria-label="" role="img">
+       ✏️
+      </span>
+     </a>
+    </p>
+   </div>
+   <!-- <h2 class='toc'>toc</h2> -->
+   <!-- <div class="toc">
+<ul>
+<li><a href="#abcmeta">ABCMeta</a></li>
+</ul>
+</div>
+ -->
+   <div id="post-body">
+    <p>
+     I host a lot of services in my homelab, but they're mostly dockerized applications so I have never had to care much about how content gets served up.
+Today I had several little concepts click into place regarding webservers, and it was a similar experience to when I started homelabing and didn't know what a "server" was in the first place.
+    </p>
+    <h1 id="servers">
+     Servers
+     <a alt="id" class="heading-permalink" href="#servers" title="link to #servers">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h1>
+    <p>
+     A "server" can have a lot of different meanings but specifically in my world it was a physical server, like my PowerEdge R610 which acts as my main "home server".
+But then on my server, I have other servers... Jellyfin is my main media server - but that's obviously not a hardware thing, that's software. 
+This is certainly not a groundbreaking thing but it was a tiny piece to the puzzle that I was missing... that "server" is highly contextual.
+    </p>
+    <h1 id="webservers">
+     Webservers
+     <a alt="id" class="heading-permalink" href="#webservers" title="link to #webservers">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h1>
+    <p>
+     Something that confused the heck out of me when I first started down the road of having a server was what a webserver even was...
+I always thought the "webserver" was just "a server that hosts a website"... and yes, that's true, but also it wasn't true in how I understood "server".
+It turns out that across my 40-odd dockerized services I have at home that I must have about 40-odd web servers running, each docker container is spinning up its own!
+    </p>
+    <p>
+     So something I have wanted to do for a long time is put my theology notes online for my small group to access whenever they might want... it doesn't need to be fancy or anything.
+My issue was not knowing what to even Google. I tried "How to serve up static html" but that kind of search is for people who know what a "static" site is - I am not one of those people.
+I kept running across nginx and apache things, wordpress and other website building tools, etc.
+In fact I only recently learned that JavaScript assets cann still be considered static so I am a complete baby in the web-dev space.
+    </p>
+    <p>
+     What I really wanted was just a simple landing page with a link to each of my "posts" which are in the form of a single html file each that I can easily export from my tiddlywiki (I have a post about tiddlywiki
+     <a href="/tiddly-wiki">
+      here
+     </a>
+     )
+    </p>
+    <p>
+     The first win
+     <code>
+      python -m http.server
+     </code>
+     right in the directory I kept my html files in and that got me what I wanted functionally. 
+But then I wanted just a hair more organization...
+I started looking for a way to dynamically generate an index for a directory of html files but again the verbiage of that Google search just wasn't helping me - I didn't want anything complicated and I knew that what I wanted had to be easy...
+    </p>
+    <h1 id="the-index">
+     The Index
+     <a alt="id" class="heading-permalink" href="#the-index" title="link to #the-index">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h1>
+    <p>
+     Luckily I randomly came across a SO that mentioned a Linux utility called
+     <code>
+      tree
+     </code>
+     which does exactly what I wanted!
+    </p>
+    <p>
+     See my TIL on
+     <code>
+      tree
+     </code>
+     <a href="" title="/tree">
+      here
+     </a>
+    </p>
+    <p>
+     So now it goes like this:
+    </p>
+    <ul>
+     <li>
+      Take notes on X in my tiddlywiki
+     </li>
+     <li>
+      Export that tiddler to a html file
+     </li>
+     <li>
+      Put that html file into a
+      <code>
+       notes
+      </code>
+      folder in my github repo for small group notes
+     </li>
+     <li>
+      Use
+      <code>
+       tree
+      </code>
+      to generate an
+      <code>
+       index.html
+      </code>
+      of each of those files in the
+      <code>
+       notes
+      </code>
+      directory
+     </li>
+     <li>
+      Use
+      <code>
+       python -m http.server
+      </code>
+      to start a web server that lands me at the
+      <code>
+       index.html
+      </code>
+      and now I can click through to any post!
+     </li>
+    </ul>
+    <p>
+     It's not fancy but it's functional... 
+This site/blog is built with markdown and
+     <a href="https://www.markata.dev">
+      markata
+     </a>
+     and I wanted way more functionality in my tech notes.
+But for this simple use case I learned a ton about
+     <em>
+      how
+     </em>
+     content gets served up on a webpage and my small group benefits from the easy access as well!
+    </p>
+   </div>
+   <hr/>
+   <div id="show">
+   </div>
+  </article>
+  <footer>
+   <ul class="social">
+    <li>
+     <a href="https://twitter.com/pypeaday">
+      twitter
+     </a>
+    </li>
+    <li>
+     <a href="https://www.linkedin.com/in/nicpayne713/">
+      LinkedIn
+     </a>
+    </li>
+    <li>
+     <a href="https://github.com/nicpayne713">
+      GitHub
+     </a>
+    </li>
+    <li>
+     <a href="https://www.twitch.tv/pypeaday">
+      twitch
+     </a>
+    </li>
+   </ul>
+   <p>
+    © 2022 - 2022
+   </p>
+  </footer>
+ </body>
+</html>

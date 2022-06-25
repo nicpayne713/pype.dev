@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width" name="viewport"/>
+  <link href="/bitmoji.ico" rel="icon" type="image/png"/>
+  <link href="https://pype.dev/til/git-bisect/amp/" rel="amphtml"/>
+  <meta content="$ilp.uphold.com/MGN2ni2YMXaQ" name="monetization" property="monetization"/>
+  <!-- <link rel='stylesheet' href='/fonts.css' />
+  <link rel='stylesheet' href='/archive-styles.css' />
+  <link rel='stylesheet' href='/article.css' /> -->
+  <link href="/main.css" rel="stylesheet"/>
+  <link as="style" href="/one-dark.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+  <link as="style" href="/furo-purge.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+  <!-- <link rel="preload" href="/scroll.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+  <noscript>
+   <!-- <link rel='stylesheet' href='/scroll.css' /> -->
+   <link href="/one-dark.min.css" rel="stylesheet"/>
+   <link href="/furo-purge.min.css" rel="stylesheet"/>
+  </noscript>
+  <link href="bitmoji_48x48.png" rel="apple-touch-icon" sizes="48x48"/>
+  <link href="bitmoji_72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+  <link href="bitmoji_96x96.png" rel="apple-touch-icon" sizes="96x96"/>
+  <link href="bitmoji_144x144.png" rel="apple-touch-icon" sizes="144x144"/>
+  <link href="bitmoji_192x192.png" rel="apple-touch-icon" sizes="192x192"/>
+  <link href="bitmoji_256x256.png" rel="apple-touch-icon" sizes="256x256"/>
+  <link href="bitmoji_384x384.png" rel="apple-touch-icon" sizes="384x384"/>
+  <link href="bitmoji_512x512.png" rel="apple-touch-icon" sizes="512x512"/>
+  <title>
+   Git-Bisect
+  </title>
+  <meta content="article" name="og:type" property="og:type"/>
+  <meta content="Nicholas Payne" name="og:author" property="og:author"/>
+  <meta content="Nicholas Payne" name="og:site_name" property="og:site_name"/>
+  <meta content="#3A5895" name="theme-color"/>
+  <meta content="Nicholas Payne" name="og:author" property="og:author"/>
+  <meta content="pypeaday@pm.me" name="og:author_email" property="og:author_email"/>
+  <meta content="website" name="og:type" property="og:type"/>
+  <meta content="I try to commit a lot, and I also try to write useful tests appropriate for the scope of work I Whether by laziness, ignorance, or accepted tech debt I don Befo" name="description" property="description"/>
+  <meta content="I try to commit a lot, and I also try to write useful tests appropriate for the scope of work I Whether by laziness, ignorance, or accepted tech debt I don Befo" name="og:description" property="og:description"/>
+  <meta content="I try to commit a lot, and I also try to write useful tests appropriate for the scope of work I Whether by laziness, ignorance, or accepted tech debt I don Befo" name="twitter:description" property="twitter:description"/>
+  <meta content="Git-Bisect | Pypeaday" name="og:title" property="og:title"/>
+  <meta content="Git-Bisect | Pypeaday" name="twitter:title" property="twitter:title"/>
+  <meta content="/static/images/til/git-bisect-og.png" name="og:image" property="og:image"/>
+  <meta content="/static/images/til/git-bisect-og.png" name="twitter:image" property="twitter:image"/>
+  <meta content="1600" name="og:image:width" property="og:image:width"/>
+  <meta content="900" name="og:image:width" property="og:image:width"/>
+  <meta content="summary_large_image" name="twitter:card" property="twitter:card"/>
+  <meta content="Pypeaday" name="og:site_name" property="og:site_name"/>
+  <meta content="@pypeaday" name="twitter:creator" property="twitter:creator"/>
+  <meta content="Git-Bisect" name="title" property="title"/>
+  <meta content="markata 0.2.0" name="generator" property="generator"/>
+  <link href="https://pype.dev/til/git-bisect/" rel="canonical"/>
+  <meta content="https://pype.dev/til/git-bisect/" name="og:url" property="og:url"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="/static/images/til/git-bisect-og_250x140.png" name="og:sm_image" property="og:sm_image"/>
+  <meta content="/static/images/til/git-bisect-og_250x140.png" name="og:sm_image" property="og:sm_image"/>
+ </head>
+ <body>
+  <nav>
+   <ul>
+    <li>
+     <a href="/">
+      Home
+     </a>
+    </li>
+    <li>
+     <a href="/archive/">
+      Archive
+     </a>
+    </li>
+    <li>
+     <a aria-label="RSS" href="/rss.xml">
+      <svg class="icon" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+       <path d="M 4 4.44 v 2.83 c 7.03 0 12.73 5.7 12.73 12.73 h 2.83 c 0 -8.59 -6.97 -15.56 -15.56 -15.56 Z m 0 5.66 v 2.83 c 3.9 0 7.07 3.17 7.07 7.07 h 2.83 c 0 -5.47 -4.43 -9.9 -9.9 -9.9 Z M 6.18 15.64 A 2.18 2.18 0 0 1 6.18 20 A 2.18 2.18 0 0 1 6.18 15.64" fill="currentColor">
+       </path>
+      </svg>
+     </a>
+    </li>
+   </ul>
+  </nav>
+  <article class="blog-post h-entry">
+   <!-- <div id='cover-wrapper'>
+      <img src='/til/git-bisect.webp' alt='cover image for article' />
+    </div> -->
+   <div id="title-wrapper">
+    <a class="u-url" href="https://pype.dev/til/git-bisect/">
+     <h1 class="flair" id="title" style="text-align:right;z-index:2;padding-right:.2rem">
+      Git-Bisect
+     </h1>
+    </a>
+    <p>
+     <time class="dt-published post-date" datetime="2022-05-03" style="text-align:right;z-index:2">
+      2022-05-03
+     </time>
+    </p>
+    <div class="h-card p-author" rel="author">
+     <div class="content">
+      <a class="p-name u-url" href="https://pype.dev/">
+       <p>
+        <span class="p-given-name">
+         Nicholas
+        </span>
+        <span class="p-family-name">
+         Payne
+        </span>
+       </p>
+      </a>
+      <p class="p-note">
+       Goofing off
+       <a href="https://twitter.com/pypeaday">
+        @pypeaday
+       </a>
+      </p>
+     </div>
+    </div>
+    <!-- edit -->
+    <p>
+     <a alt="edit post url" href="https://github.com/nicpayne713/mental-data-lake/edit/main/pages/blog/til/git-bisect.md" title="edit this post">
+      edit
+      <span aria-label="" role="img">
+       ✏️
+      </span>
+     </a>
+    </p>
+   </div>
+   <!-- <h2 class='toc'>toc</h2> -->
+   <!-- <div class="toc">
+<ul>
+<li><a href="#abcmeta">ABCMeta</a></li>
+</ul>
+</div>
+ -->
+   <div id="post-body">
+    <p>
+     I try to commit a lot, and I also try to write useful tests appropriate for the scope of work I'm focusing on, but sometimes I drop the ball...
+    </p>
+    <p>
+     Whether by laziness, ignorance, or accepted tech debt I don't always code perfectly and recently I was dozens of commits into a new feature before realizing I broke something along the way that none of my tests caught...
+    </p>
+    <p>
+     Before today I would've manually reviewed every commit to see if something obvious slipped by me (talk about a time suck 😩)
+    </p>
+    <p>
+     <strong>
+      There must be a better way
+     </strong>
+    </p>
+    <h1 id="bisect">
+     Bisect?
+     <a alt="id" class="heading-permalink" href="#bisect" title="link to #bisect">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h1>
+    <p>
+     <code>
+      git bisect
+     </code>
+     is the magic sauce for this exact problem...
+    </p>
+    <p>
+     You essentially create a range of commits to consider and let
+     <code>
+      git bisect
+     </code>
+     guide you through them in a manner akin to Newton's method for finding the root of a continuous function.
+    </p>
+    <h1 id="how-to-do-it">
+     How to do it?
+     <a alt="id" class="heading-permalink" href="#how-to-do-it" title="link to #how-to-do-it">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h1>
+    <p>
+     Start with
+     <code>
+      git bisect start
+     </code>
+     and then choose the first
+     <code>
+      good
+     </code>
+     commit (ie. a commit you know the bug isn't present in)
+    </p>
+    <div class="highlight">
+     <pre><span></span><code>sandbox   bisect-post   ×1 via   v3.8.11<span class="o">(</span>sandbox<span class="o">)</span>  on  <span class="o">(</span>us-east-1<span class="o">)</span>
+❯ git bisect start
+
+sandbox   bisect-post <span class="o">(</span>BISECTING<span class="o">)</span>   ×1 via   v3.8.11<span class="o">(</span>sandbox<span class="o">)</span>  on  <span class="o">(</span>us-east-1<span class="o">)</span>
+❯ git bisect good 655332b
+bisect-post  HEAD         main         ORIG_HEAD
+5b31e1e  -- <span class="o">[</span>HEAD<span class="o">]</span>    add successful print <span class="o">(</span><span class="m">52</span> seconds ago<span class="o">)</span>
+308247b  -- <span class="o">[</span>HEAD^<span class="o">]</span>   init another loop <span class="o">(</span><span class="m">77</span> seconds ago<span class="o">)</span>
+4555c59  -- <span class="o">[</span>HEAD^^<span class="o">]</span>  introduce bug <span class="o">(</span><span class="m">2</span> minutes ago<span class="o">)</span>
+9cf6d55  -- <span class="o">[</span>HEAD~3<span class="o">]</span>  add successful loop <span class="o">(</span><span class="m">3</span> minutes ago<span class="o">)</span>
+bcb41c3  -- <span class="o">[</span>HEAD~4<span class="o">]</span>  change x to <span class="m">10</span> <span class="o">(</span><span class="m">4</span> minutes ago<span class="o">)</span>
+3c34aac  -- <span class="o">[</span>HEAD~5<span class="o">]</span>  init x to <span class="m">1</span> <span class="o">(</span><span class="m">4</span> minutes ago<span class="o">)</span>
+12e53bd  -- <span class="o">[</span>HEAD~6<span class="o">]</span>  print cwd <span class="o">(</span><span class="m">4</span> minutes ago<span class="o">)</span>
+655332b  -- <span class="o">[</span>HEAD~7<span class="o">]</span>  add example.py <span class="o">(</span><span class="m">10</span> minutes ago<span class="o">)</span>  <span class="c1"># &lt;- I want to start at this commit</span>
+59e0048  -- <span class="o">[</span>HEAD~8<span class="o">]</span>  gitignore <span class="o">(</span><span class="m">23</span> hours ago<span class="o">)</span>
+fb9e1fb  -- <span class="o">[</span>HEAD~9<span class="o">]</span>  add reqs <span class="o">(</span><span class="m">23</span> hours ago<span class="o">)</span>
+</code></pre>
+    </div>
+    <div class="highlight">
+     <pre><span></span><code>sandbox   bisect-post <span class="o">(</span>BISECTING<span class="o">)</span>   ×1 via   v3.8.11<span class="o">(</span>sandbox<span class="o">)</span>  on  <span class="o">(</span>us-east-1<span class="o">)</span>
+❯ git bisect bad 5b31e1e
+bisect-post                                                ORIG_HEAD
+HEAD                                                       refs/bisect/good-655332b6c384934c2c00c3d4aba3011ccc1e5b57
+main
+5b31e1e  -- <span class="o">[</span>HEAD<span class="o">]</span>    add successful print <span class="o">(</span><span class="m">5</span> minutes ago<span class="o">)</span>  <span class="c1"># &lt;- I start here with the "bad" commit</span>
+308247b  -- <span class="o">[</span>HEAD^<span class="o">]</span>   init another loop <span class="o">(</span><span class="m">6</span> minutes ago<span class="o">)</span>
+4555c59  -- <span class="o">[</span>HEAD^^<span class="o">]</span>  introduce bug <span class="o">(</span><span class="m">6</span> minutes ago<span class="o">)</span>
+9cf6d55  -- <span class="o">[</span>HEAD~3<span class="o">]</span>  add successful loop <span class="o">(</span><span class="m">7</span> minutes ago<span class="o">)</span>
+bcb41c3  -- <span class="o">[</span>HEAD~4<span class="o">]</span>  change x to <span class="m">10</span> <span class="o">(</span><span class="m">8</span> minutes ago<span class="o">)</span>
+3c34aac  -- <span class="o">[</span>HEAD~5<span class="o">]</span>  init x to <span class="m">1</span> <span class="o">(</span><span class="m">9</span> minutes ago<span class="o">)</span>
+12e53bd  -- <span class="o">[</span>HEAD~6<span class="o">]</span>  print cwd <span class="o">(</span><span class="m">9</span> minutes ago<span class="o">)</span>
+655332b  -- <span class="o">[</span>HEAD~7<span class="o">]</span>  add example.py <span class="o">(</span><span class="m">14</span> minutes ago<span class="o">)</span>
+59e0048  -- <span class="o">[</span>HEAD~8<span class="o">]</span>  gitignore <span class="o">(</span><span class="m">23</span> hours ago<span class="o">)</span>
+fb9e1fb  -- <span class="o">[</span>HEAD~9<span class="o">]</span>  add reqs <span class="o">(</span><span class="m">23</span> hours ago<span class="o">)</span>
+</code></pre>
+    </div>
+    <p>
+     After starting bisect with a "good" start commit and a "bad" ending commit we can let git to it's thing!
+    </p>
+    <p>
+     Git checksout a commit somewhere about halfway between the good and bad commit so you can see if your bug is there or not.
+    </p>
+    <div class="highlight">
+     <pre><span></span><code>sandbox   bisect-post <span class="o">(</span>BISECTING<span class="o">)</span>   ×1 via   v3.8.11<span class="o">(</span>sandbox<span class="o">)</span>  on  <span class="o">(</span>us-east-1<span class="o">)</span>
+❯ git bisect bad 5b31e1e
+Bisecting: <span class="m">3</span> revisions left to <span class="nb">test</span> after this <span class="o">(</span>roughly <span class="m">2</span> steps<span class="o">)</span>
+<span class="o">[</span>bcb41c3854e343eade85353683f2c1c4ddde4e04<span class="o">]</span> change x to <span class="m">10</span>
+
+sandbox   HEAD <span class="o">(</span>bcb41c38<span class="o">)</span> <span class="o">(</span>BISECTING<span class="o">)</span>   ×1 via   v3.8.11<span class="o">(</span>sandbox<span class="o">)</span>  on  <span class="o">(</span>us-east-1<span class="o">)</span>
+❯
+</code></pre>
+    </div>
+    <p>
+     In my example here I have a python script with some loops and print statements - they aren't really relevant, I just wanted an easy to follow git history.
+    </p>
+    <p>
+     So I check to see if the bug is present or not either by running/writing tests or replicating the bug somehow.
+    </p>
+    <p>
+     In this session commit
+     <code>
+      bcb41c38
+     </code>
+     is actually just fine, so I do
+     <code>
+      git bisect good
+     </code>
+    </p>
+    <div class="highlight">
+     <pre><span></span><code>sandbox   HEAD <span class="o">(</span>bcb41c38<span class="o">)</span> <span class="o">(</span>BISECTING<span class="o">)</span>   ×1 via   v3.8.11<span class="o">(</span>sandbox<span class="o">)</span>  on  <span class="o">(</span>us-east-1<span class="o">)</span>
+❯ git bisect good
+Bisecting: <span class="m">1</span> revision left to <span class="nb">test</span> after this <span class="o">(</span>roughly <span class="m">1</span> step<span class="o">)</span>
+<span class="o">[</span>4555c5979268dff6c475365fdc5ce1d4a12bd820<span class="o">]</span> introduce bug
+</code></pre>
+    </div>
+    <p>
+     And we see that git moves on to checkout another commit...
+    </p>
+    <p>
+     In this case the next commit is the one where I introduced a bug
+    </p>
+    <p>
+     <code>
+      git bisect bad
+     </code>
+     then gives me:
+    </p>
+    <div class="highlight">
+     <pre><span></span><code>sandbox   HEAD <span class="o">(</span>4555c597<span class="o">)</span> <span class="o">(</span>BISECTING<span class="o">)</span>   ×1 via   v3.8.11<span class="o">(</span>sandbox<span class="o">)</span>  on  <span class="o">(</span>us-east-1<span class="o">)</span>
+❯ git bisect bad
+Bisecting: <span class="m">0</span> revisions left to <span class="nb">test</span> after this <span class="o">(</span>roughly <span class="m">0</span> steps<span class="o">)</span>
+<span class="o">[</span>9cf6d55301560c51e2f55404d0d80b1f1e22a33d<span class="o">]</span> add successful loop
+</code></pre>
+    </div>
+    <p>
+     At
+     <code>
+      4555c597
+     </code>
+     the script works as expected so one more
+     <code>
+      git bisect good
+     </code>
+     yields...
+    </p>
+    <div class="highlight">
+     <pre><span></span><code>sandbox   HEAD <span class="o">(</span>9cf6d553<span class="o">)</span> <span class="o">(</span>BISECTING<span class="o">)</span>   ×1 via   v3.8.11<span class="o">(</span>sandbox<span class="o">)</span>  on  <span class="o">(</span>us-east-1<span class="o">)</span>
+❯ git bisect good
+4555c5979268dff6c475365fdc5ce1d4a12bd820 is the first bad commit
+commit 4555c5979268dff6c475365fdc5ce1d4a12bd820
+Author: <span class="c1">########################### </span>
+Date:   Tue May <span class="m">3</span> <span class="m">09</span>:00:00 <span class="m">2022</span> -0500
+
+    introduce bug
+
+ example.py <span class="p">|</span> <span class="m">2</span> +-
+ <span class="m">1</span> file changed, <span class="m">1</span> insertion<span class="o">(</span>+<span class="o">)</span>, <span class="m">1</span> deletion<span class="o">(</span>-<span class="o">)</span>
+</code></pre>
+    </div>
+    <h1 id="what-happened">
+     What happened?
+     <a alt="id" class="heading-permalink" href="#what-happened" title="link to #what-happened">
+      <span class="visually-hidden">
+      </span>
+      <svg aria-hidden="true" fill="currentColor" focusable="false" height="1em" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9.199 13.599a5.99 5.99 0 0 0 3.949 2.345 5.987 5.987 0 0 0 5.105-1.702l2.995-2.994a5.992 5.992 0 0 0 1.695-4.285 5.976 5.976 0 0 0-1.831-4.211 5.99 5.99 0 0 0-6.431-1.242 6.003 6.003 0 0 0-1.905 1.24l-1.731 1.721a.999.999 0 1 0 1.41 1.418l1.709-1.699a3.985 3.985 0 0 1 2.761-1.123 3.975 3.975 0 0 1 2.799 1.122 3.997 3.997 0 0 1 .111 5.644l-3.005 3.006a3.982 3.982 0 0 1-3.395 1.126 3.987 3.987 0 0 1-2.632-1.563A1 1 0 0 0 9.201 13.6zm5.602-3.198a5.99 5.99 0 0 0-3.949-2.345 5.987 5.987 0 0 0-5.105 1.702l-2.995 2.994a5.992 5.992 0 0 0-1.695 4.285 5.976 5.976 0 0 0 1.831 4.211 5.99 5.99 0 0 0 6.431 1.242 6.003 6.003 0 0 0 1.905-1.24l1.723-1.723a.999.999 0 1 0-1.414-1.414L9.836 19.81a3.985 3.985 0 0 1-2.761 1.123 3.975 3.975 0 0 1-2.799-1.122 3.997 3.997 0 0 1-.111-5.644l3.005-3.006a3.982 3.982 0 0 1 3.395-1.126 3.987 3.987 0 0 1 2.632 1.563 1 1 0 0 0 1.602-1.198z">
+       </path>
+      </svg>
+     </a>
+    </h1>
+    <p>
+     Git sliced up a range of commits based on me saying of the next one was good or bad and localized the commit that introduced a bug into my workflow!
+    </p>
+    <p>
+     I didn't have to manually review commits, click through logs, etc... I just let git checkout relevant commits and I ran whatever was appropriate for reproducing the bug to learn when it was comitted!
+    </p>
+   </div>
+   <hr/>
+   <div id="show">
+   </div>
+  </article>
+  <footer>
+   <ul class="social">
+    <li>
+     <a href="https://twitter.com/pypeaday">
+      twitter
+     </a>
+    </li>
+    <li>
+     <a href="https://www.linkedin.com/in/nicpayne713/">
+      LinkedIn
+     </a>
+    </li>
+    <li>
+     <a href="https://github.com/nicpayne713">
+      GitHub
+     </a>
+    </li>
+    <li>
+     <a href="https://www.twitch.tv/pypeaday">
+      twitch
+     </a>
+    </li>
+   </ul>
+   <p>
+    © 2022 - 2022
+   </p>
+  </footer>
+ </body>
+</html>
